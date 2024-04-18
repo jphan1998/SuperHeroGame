@@ -1,0 +1,243 @@
+F1R1
+Entrance Hall
+Embark on your perilous journey from the Entrance Hall, the threshold to the dark depths of the dungeon. 
+Here, the flickering light of torches illuminates the ancient stone walls, guiding you towards the wooden door leading to the first floor of the dungeon.
+false 
+{north=F1R2}
+
+F1R2
+Guard Room
+Traverse the narrow passageway of the Guard Room, where the shadows dance eerily amidst the glow of torchlight. 
+The torch-lined walls, casting flickering shadows across the worn stone floor, leading the way to the mysteries that await beyond. 
+To the North, a wooden door beckons, granting passage to the Warden's Room (F1R4), where treasures gleam amidst the dust of forgotten memories. 
+To the West, a passage leads to the Prison Cells (West Wing) (F1R3), where the whispers of the forgotten echo through the dank 
+corridors. 
+And to the East, another corridor awaits, leading to the Prison Cells (East Wing) (F1R5), where shadows linger and secrets lie hidden in the darkness.
+false
+{north=F1R5, east=F1R4, west=F1R3}
+
+F1R3
+Prison Cells (West Wing)
+Venture into the Prison Cells, where the whispers of the forgotten echo through the dank corridors. 
+Within the confines of a decaying cell, a note clutched in the grip of a fallen prisoner poses a 
+riddle, its words etched in desperation. 
+Solve the enigma to uncover the hidden lever, unlocking the path to the Torture Chamber Room and unraveling the secrets held within. 
+To the East, a passage leads back to the Guard Room (F1R2), where the journey through the dungeon began, 
+offering a familiar path amidst the unknown depths of the labyrinth.
+false
+{east=F1R2}
+
+F1R4
+Prison Cells (East Wing)
+Enter the Prison Cells of the East Wing, where the air is heavy with the scent of decay and the echoes 
+of lost souls linger in the shadows. Here, players encounter their first monster, a ferocious 
+skeleton(dead prisoner), its hollow gaze fixed upon the door to the next chamber that he’s guarding. 
+Combat becomes inevitable as players must face this undead guardian to progress deeper into the dungeon's depths. 
+To the East, a corridor leads to the Torture Chamber (F1R7), where shadows dance amidst the echoes of torment. 
+To the West, the passage leads back to the Guard Room (F1R2), 
+offering a retreat to familiar surroundings amidst the labyrinthine corridors of the dungeon.
+false
+{east=F1R7, west=F1R2}
+
+F1R5
+Wardens Room
+Step into the Warden's Room, a chamber steeped in history and guarded by the echoes of the past. 
+Within, treasures gleam amidst the dust of forgotten memories, tempting adventurers with promises of riches. 
+Proceed with caution, for within the room's confines lies the allure of both fortune and peril. 
+To reach the fortune inside the chest players must find the numeric key to open. 
+Failing to do so results in bad fortune. To the North, an iron gate bars the way forward, 
+hinting at secrets yet to be revealed beyond its imposing presence. 
+To the South, the passage leads back to the Guard Room (F1R2), 
+offering a retreat to familiar surroundings amidst the labyrinthine corridors of the dungeon.
+false
+{north=F1R6, south=F1R2}
+
+F1R6
+Iron Gate
+Venture into the Iron Gate room, a winding corridor that leads deeper into the dungeon. 
+Ominous shadows lurk in the dimly lit corners, hinting at the mysteries that lie beyond. 
+Behind the bars of the iron gate, players catch a glimpse of the next floor, tantalizingly close yet out of reach. 
+To proceed, they must find a way to unlock the door and uncover the secrets that await on the other side. 
+To the South, the passage leads back to the
+Wardens Room (F1R5), where treasures gleam amidst the dust of forgotten memories, offering a 
+retreat or further exploration.
+false
+{south=F1R5}
+
+F1R7
+Torture Chamber
+Enter the Torture Chamber, a chamber steeped in darkness and filled with the echoes of suffering. 
+Diabolical devices line the walls, whispering tales of torment and despair. 
+As players peer through the glass window, they glimpse an item that holds the key to their progression. 
+Yet, despite their efforts, the door remains stubbornly sealed. 
+They must search elsewhere for the means to unlock it, for the path forward lies hidden in the depths of the dungeon's secrets. 
+To the West, a passage leads back to the Prison Cells (East Wing) (F1R4), 
+where shadows linger amidst the corridors of solitude, offering a retreat or further exploration. 
+false
+{west=F1R4}
+
+F2R1
+Iron Gate
+Another treasure room awaits, guarded by a mystical guardian. 
+Players must solve a series of riddles to gain access to the valuable treasures hidden within.
+false
+{south=F2R2}
+
+F2R2
+Tunnel Entrance
+Enter the Tunnel Entrance, a narrow passageway that delves deeper into the heart of the dungeon's 
+darkness. Dusty cobwebs cling to the ancient stone 
+walls, and faint symbols of forgotten power are etched into the crumbling rock. Here, the air is 
+heavy with the scent of decay, and the echoes of distant whispers seem to reverberate through the shadows.
+false
+{north=F2R1, east=F2R3, south=F2R4}
+
+F2R3
+Ruined Gate
+Enter the Ruined Gate Chamber, a dusty stone room housing a mysterious door lacking a 
+conventional handle. Upon closer inspection, 
+players may notice a slot shaped for a spear-like 
+object. To unlock the door, adventurers must first solve a complex puzzle, deciphering symbols 
+adorning the walls to reveal the location of the 
+matching keystone. When inserted, the keystone illuminates in a pattern mirroring the door's 
+symbols, unveiling the path forward amidst ancient mechanisms and cryptic symbols.
+false
+{west=F2R2}
+
+F2R4
+Depths
+Descend into the Depths, where the darkness seems to swallow all light, and the very air is thick with 
+the weight of ages. Dusty corridors wind their way 
+through the ancient stone leading to the fearsome 
+Golem. A massive creature made of stone that guards the passage further into the dungeon. 
+To proceed to the Rat Warren and Abandoned 
+Mineshaft rooms, players must defeat the Golem in combat, using their wits and strategy to overcome its formidable defenses.
+false
+{north=F2R2, east=F2R5, west=F2R6}
+
+F2R5
+Abandoned Mineshaft
+Enter the Abandoned Mineshaft, where the echoes of pickaxes and the clatter of carts have long since fallen silent. Dust clouds dance in the dim light, 
+swirling around rusty minecarts and broken tools. 
+Crumbling support beams loom overhead, while ancient symbols of warning are etched into the 
+rock walls, hinting at the dangers that lurk in the darkness. As players explore the crumbling 
+corridors of the Abandoned Mineshaft, they 
+encounter the formidable Spectral Wraith, a ghostly 
+apparition that haunts the depths of the dungeon. 
+To gain access to the Underground Lake room, players must confront the Spectral Wraith in battle, 
+utilizing light-based attacks or holy magic to weaken its ethereal form and clear the path forward.
+false
+{south=F2R8, west=F2R4}
+
+F2F6
+Rat Warren
+Venture into the Rat Warren, a labyrinth of twisting tunnels and hidden chambers that echo with the 
+scuttling of tiny claws. Dusty cobwebs cling to the rough-hewn walls, and the air is thick with the 
+musky scent of vermin. Here, amidst piles of debris and discarded bones, adventurers must navigate the maze-like passages and beware the hungry eyes 
+that watch from the shadows. In the depths of the 
+Rat Warren, players face off against the menacing 
+Skeleton Warden, an undead guardian that stands between them and the path to the Boneyard room. 
+To gain access to the Boneyard, players must defeat the Skeleton Warden, obtaining a key or 
+item necessary to unlock the door and continue their journey deeper into the dungeon's depths.
+false
+{east=F2R4, south=F2R7}
+
+F2R7
+Boneyard
+Enter the Boneyard, where the remains of long-forgotten creatures lie scattered amidst the 
+dust and decay. Skeletal remains protrude from the earth, their hollow sockets seeming to watch the unwary traveler with a silent, unending gaze. 
+Within the eerie confines of the Boneyard, players discover a mysterious artifact known as the 
+Soulstone(Runestone), a glowing gemstone said to hold the power to unlock hidden pathways. To proceed to 
+the next area, players must retrieve the Soulstone(Runestone) 
+and use its mystical energies to activate a hidden mechanism, opening the door past the 
+Underground Lake.
+false
+{north=F2R6}
+
+F2R8
+Underground Lake
+Step onto the shore of the Underground Lake Puzzle Chamber, where the murky waters extend into the unknown depths. 
+Feeble light flickers on the surface, casting dim reflections upon the 
+ancient symbols etched into the rocky walls. To uncover the hidden truths concealed within, 
+adventurers must decipher the enigmatic riddles of the lake's depths and confront the mysteries that lurk beneath its surface. 
+Amidst the chamber's intrigue lies a puzzle, presenting a sequence of symbols adorning the walls. 
+Players must discern the pattern and anticipate the next symbol in the sequence to 
+unlock gates or doors. 
+With astute observation and deduction, they can navigate the labyrinth of clues and unlock the secrets that await within.
+false
+{north=F2R5}
+
+F3R1
+Villa Ruins
+Welcome to the Villa Ruins, where time has left its mark on what was once a grand estate. Walls 
+crumble, vines entwine, and windows lie shattered, revealing the passage of years. Amidst the debris, 
+traces of former elegance remain – torn tapestries, fractured statues. 
+Yet, amidst decay, an air of mystery persists, urging exploration and discovery.
+false
+{south=F3R2}
+
+F3R2
+Amphitheater
+This crumbling stone building houses hundreds of empty seats surrounding a despondent stage. Where once crowds may have cheered, only dust and silence prevail. 
+Occasionally, when the wind 
+blows through the deserted stadium you can faintly make out what sounds like applause.
+false
+{north=F3R1, south=F2R3, east=F3R2, west=F3R3}
+
+F3R3
+Colliseum
+This room contains various weapons and armor scattered across racks and shelves. 
+Players can equip themselves with better gear to improve their combat abilities.
+false
+{east=F3R2}
+
+F3R4
+Temple
+This room contains the remnants of an ancient place of worship. Upon the tiered walls, 
+faded and cracked idols glare at you with cold stone eyes. 
+The walls are adorned with inscriptions and frescos depicting indecipherable messages and cryptic images.
+false
+{west=F3R2, south=F3R6}
+
+F3R5
+Ruined Gate
+Enter the Ruined Gate Chamber, a dusty stone room housing a mysterious door lacking a 
+conventional handle. Upon closer inspection, 
+players may notice a slot shaped for a spear-like 
+object. To unlock the door, adventurers must first solve a complex puzzle, deciphering symbols 
+adorning the walls to reveal the location of the 
+matching keystone. When inserted, the keystone illuminates in a pattern mirroring the door's 
+symbols, unveiling the path forward amidst ancient mechanisms and cryptic symbols.
+false
+{north=F3R2}
+
+F3R6
+Ritual Chamber
+A dark eerie chamber filled with tall black urns. 
+A foreboding gem-studded altar rises at one end of the room held aloft in the arms of a large stone 
+statue carved in the shape of a 6-armed humanoid 
+creature. Likely a depiction of a deity that was worshiped long ago by the ruin’s former inhabitants.
+false
+{north=F3R4, east=F3R8, south=F2R7}
+
+F3R7
+Golden Vault
+A chamber whose walls, roof, and floor are gilded with what appear to be tarnished gold. 
+Though the room has suffered the ravages of time a giant, 
+pristine disk of solid gold stands on a pedestal at one end of the room. The disk‘s surface is 
+inscribed with glyphs from an ancient language. 
+There are three sockets arranged in a triangular formation surrounding a central amethyst gemstone.
+false
+{north=F3R6}
+
+F3R8
+Secret Chamber
+Every inch of the walls, ceiling, and floor of this room is dotted with glyphs. 
+A ring of pure white glyphs encircles the spot you appeared in when you 
+teleported here. Whenever you look closely at a section of glyphs they seem to shift and change shape. 
+You can sense an otherworldly presence close by. 
+If the player searches the room the glyphs will coalesce into readable text that gives instructions for a puzzle.
+false
+{west=F3R6} 
+
+          
