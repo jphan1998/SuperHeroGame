@@ -1,9 +1,12 @@
-F1R1
-Entrance Hall
+F1R1~
+Entrance Hall~
 Embark on your perilous journey from the Entrance Hall, the threshold to the dark depths of the dungeon. 
-Here, the flickering light of torches illuminates the ancient stone walls, guiding you towards the wooden door leading to the first floor of the dungeon.
-false 
-{north=F1R2}
+Here, the flickering light of torches illuminates the ancient stone walls, guiding you towards the wooden door leading to the first floor of the dungeon.~
+false~
+F1R2~
+0~
+0~
+0~
 
 F1R2
 Guard Room
