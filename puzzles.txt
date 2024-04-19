@@ -2,6 +2,7 @@ F1R3~
 Stand before the statue of the Sphinx, guardian of ancient wisdom and keeper of timeless secrets. Listen closely as it poses a riddle, its eyes gleaming with the light of ages past. Delve into the depths of your mind and unearth the answer, for only those who solve its enigma shall be deemed worthy to tread further upon the path of destiny.~
 The room is adorned with ancient hieroglyphs and a statue of a Sphinx. Engraved on a stone tablet nearby is a riddle posed by the Sphinx. To proceed, the player must solve the riddle and provide the correct answer. Riddle: "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"~
 Echo~
+3~
 
 F1R5~
 Embark on a journey of discovery as you unravel the enigmatic clues hidden within the chamber's confines. Piece together the fragments of a forgotten code, etched into the very walls of the dungeon, to unlock the ancient chest concealed within and claim the treasures that lie dormant within its depths. The room contains a locked chest with a numeric keypad.~
