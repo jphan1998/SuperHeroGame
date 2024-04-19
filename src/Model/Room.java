@@ -1,3 +1,5 @@
+package Model;
+
 import java.util.List;
 import java.util.Map;
 
@@ -13,11 +15,11 @@ public class Room
         private boolean isLocked;
         private boolean hasMonster;
 
-        public Room(String roomName, String roomDescription, int roomID, boolean isVisited, Map<String, String>exits)
+        public Room(int roomID ,String roomName, String roomDescription, boolean isVisited, Map<String, String>exits)
         {
+            this.roomID = roomID;
             this.roomName = roomName;
             this.roomDescription = roomDescription;
-            this.roomID = roomID;
             this.isVisited = false;
             this.exits = exits;
             this.inventory = null;
