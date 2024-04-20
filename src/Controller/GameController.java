@@ -38,12 +38,16 @@ public class GameController {
 
     public void gameStart() {
         gameView.welcome();
-        gameView.updateView("You are now in " + gameModel.getPlayer().getCurRoom().getName());
+        gameView.updateView("You are now in " + gameModel.getPlayer().getCurRoom().getName() + "\n" + gameModel.getPlayer().getCurRoom().getDescription());
     }
 
     public void gamePlay(){
         String verb;
         String object;
+        gameView.printView();
+        if(gameModel.getPlayer().getCurRoom().getVisited()){
+            gameView.hasVisited();
+        }
         String input = in.nextLine();
         String[] command = input.split(" ", 2);
         verb = command[0];
@@ -96,7 +100,7 @@ public class GameController {
                 }
             }
             else {
-
+                gameView.wrongCommand();
             }
         }
     }

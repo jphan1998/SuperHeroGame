@@ -26,9 +26,9 @@ public class Player {
     public String move(String roomId)
     {
         String room;
-        curRoom.setVisited(true);
         if (gameMap.getGameMap().containsKey(roomId))
         {
+            curRoom.setVisited(true);
             prevRoom = this.curRoom;
             this.curRoom = gameMap.getRoom(roomId);
             room = "You are now in " + curRoom.getName() + "\n" + curRoom.getDescription();
@@ -36,7 +36,7 @@ public class Player {
         }
         else
         {
-            return "Wrong";
+            return "No room";
         }
     }
 
