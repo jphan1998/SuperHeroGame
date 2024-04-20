@@ -52,4 +52,5 @@ Two Sloth's Challenge~
 There are two sloths guarding two doors, one leads to the treasure of the secret vault, the other leads to death. One Sloth only tells the truth, and the other tells a lie. You ask Sloth A which door would Sloth B pick and his response: "My brother will tell you Door A is the treasure."~
 If Sloth A is the liar, then it must be the other door. If Sloth A is telling the truth, then Sloth B would lie about Door A being safe!
 B~
+1~
 0~
