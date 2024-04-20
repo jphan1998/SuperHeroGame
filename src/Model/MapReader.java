@@ -1,7 +1,6 @@
 package Model;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -43,6 +42,45 @@ public class MapReader {
             int HP = monsterReader.nextInt();
             gameMap.get(id).setMonster(new Monster(name, desc, CR, HP));
         }
+    }
+
+    public HashMap<Integer, HashMap<String, String>> readItems(String file) throws FileNotFoundException {
+        HashMap<Integer, HashMap<String, String>> itemsMap = new HashMap<>();
+
+        File reader = new File(file); // Creates a file class that can be run through the scanner.
+        Scanner itemReader = new Scanner(reader);
+        itemReader.useDelimiter("[~\r\n]+"); // Delimiter to separate the text file, removes carriage return, new line, and '~'.
+
+        while (itemReader.hasNext()) {
+            int roomId = Integer.parseInt(itemReader.next());
+            String itemName = itemReader.next();
+            String itemDescription = itemReader.next();
+            String itemType = itemReader.next();
+
+            // Check if the room already exists in the itemsMap
+            if (!itemsMap.containsKey(roomId)) {
+                itemsMap.put(roomId, new HashMap<>());
+            }
+            Item newItem = null;
+            switch (itemType) {
+                case "Consumable":
+                    int cAmount = itemReader.nextInt();
+                    int cCount = itemReader.nextInt();
+                    newItem = new Consumables(roomId, itemName, itemDescription, itemType, cAmount, cCount);
+                    break;
+                case "Equipment":
+                    int eAmount = itemReader.nextInt();
+                    newItem = new Equipment(roomId, itemName, itemDescription, itemType, eAmount);
+                    break;
+                case "Tool":
+                    newItem = new Tools(roomId, itemName, itemDescription, itemType);
+                    break;
+                default:
+                    break;
+            }
+            itemsMap.get(roomId).put(itemName, itemDescription);
+        }
+        return itemsMap;
     }
 
     public void saveGame(String filename) {

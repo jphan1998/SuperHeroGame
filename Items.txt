@@ -1,0 +1,43 @@
+F1R5~
+Skeleton Key~
+The Skeleton Key is a mysterious and ancient artifact, crafted from darkened iron and adorned with intricate etchings of skulls and bones.~
+Item~
+F1R3~
+Health Potion~
+A small, glass vial containing a vibrant liquid with a faint, soothing glow. The liquid within sparkles with healing energy, promising relief from wounds and ailments.~
+Consumable~
+10~
+1~
+F1R1~
+Torch~
+you found this torch while exploring the dungeon~
+Item~
+F2R4~
+Rune Stone~
+Activates magical mechanisms or dispels enchantments blocking the player's path.~
+Item~
+F2R2~
+Grapple Hook~
+A sturdy metal hook attached to a length of strong rope, designed for traversing treacherous terrain or scaling towering structures with ease. Its reliable construction and versatility make it a valuable tool for adventurers seeking new heights.~
+Tool~
+F2R5~
+Mirror Shield~
+A gleaming shield adorned with a reflective surface, capable of deflecting both physical and magical attacks. Its mirrored surface can also be used to dazzle foes with blinding flashes of light, providing a strategic advantage in battle.~
+Item~
+F3R7~
+Invisibility Cloak~
+A silken cloak infused with magic that grants its wearer the ability to become invisible at will. While wrapped in its folds, one can move unseen and undetected, making it an invaluable asset for stealthy maneuvers or escaping dangerous situations unnoticed.~
+Item~
+F3R4~
+Scroll of Knowledge~
+A rolled parchment inscribed with intricate symbols and arcane writings, containing a wealth of information on various subjects.~
+Tool~
+F3R3~
+Enchanted Dagger~
+A finely crafted dagger imbued with mystical enchantments, capable of delivering devastating blows to foes.~
+Equipment~
+4~
+F3R6~
+Teleportation Crystal~
+A crystalline orb pulsating with magical energy, allowing its possessor to instantly teleport to a predetermined location upon activation. Its shimmering surface holds the promise of swift travel across vast distances.~
+Tool~
