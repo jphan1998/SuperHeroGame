@@ -12,6 +12,7 @@ public class MapReader {
         gameMap = new HashMap<>();
         readMap("Room.txt");
         readMonster("Monster.txt");
+        readPuzzle("Puzzle.txt");
     }
 
     public void readMap(String file) throws FileNotFoundException {
