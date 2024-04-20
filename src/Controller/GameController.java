@@ -80,7 +80,7 @@ public class GameController {
                     }
                 }
                 else if(object.equalsIgnoreCase("East")){
-                    if(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getN()).getIsLocked()){
+                    if(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getE()).getIsLocked()){
                         gameView.lockedRoom();
                     }
                     else {
@@ -88,7 +88,7 @@ public class GameController {
                     }
                 }
                 else if(object.equalsIgnoreCase("South")){
-                    if(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getN()).getIsLocked()){
+                    if(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getS()).getIsLocked()){
                         gameView.lockedRoom();
                     }
                     else {
@@ -96,7 +96,7 @@ public class GameController {
                     }
                 }
                 else if(object.equalsIgnoreCase("West")){
-                    if(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getN()).getIsLocked()){
+                    if(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getW()).getIsLocked()){
                         gameView.lockedRoom();
                     }
                     else {
