@@ -39,12 +39,12 @@ public class Room
             //checks for monster
             if (monster != null)
             {
-                searchResult.append("There is a monster here! ").append(monster.getName()).append("Description: ").append(monster.getDesc()).append(".");
+                searchResult.append("There is a monster here! ").append(monster.getName()).append(" Description: ").append(monster.getDesc()).append(".");
             }
             //checks puzzle
             if (puzzle != null)
             {
-                searchResult.append("There is a puzzle here! ").append(puzzle.getDesc()).append(".");
+                searchResult.append("There is a puzzle here!").append(puzzle.getDesc()).append(".");
             }
             if (!inventory.isEmpty())
             {
