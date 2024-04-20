@@ -60,8 +60,9 @@ public class GameController {
 
             } else if (verb.equalsIgnoreCase("W")) {
 
-            } else if (verb.equalsIgnoreCase("Explore")) {
-
+            } else if (verb.equalsIgnoreCase("Explore"))
+            {
+                gameView.updateView(gameModel.getPlayer().getCurRoom().searchRoom());
             }
             else if(verb.equalsIgnoreCase("Inventory")){
 
