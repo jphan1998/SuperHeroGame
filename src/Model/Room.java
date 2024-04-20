@@ -110,10 +110,7 @@ public class Room
         {
             return isLocked;
         }
-        public boolean isLocked()
-        {
-            return isLocked;
-        }
+        public void setLocked(boolean locked) {this.isLocked = locked;}
 
         public Map<String, Item> getInventory() {
             return inventory;

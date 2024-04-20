@@ -52,32 +52,17 @@ public class GameController {
         String[] command = input.split(" ", 2);
         verb = command[0];
         if (command.length == 1) {
-            if (verb.equalsIgnoreCase("n")) {
-
-            } else if (verb.equalsIgnoreCase("e")) {
-
-            } else if (verb.equalsIgnoreCase("S")) {
-
-            } else if (verb.equalsIgnoreCase("W")) {
+            if(verb.equalsIgnoreCase("Inventory") || verb.equalsIgnoreCase("I")){
 
             } else if (verb.equalsIgnoreCase("Search"))
             {
                 gameView.updateSearch(gameModel.getPlayer().getCurRoom().searchRoom());
             }
-            else if(verb.equalsIgnoreCase("Inventory")){
-
-            }
-            else if(verb.equalsIgnoreCase("Stats")){
-
-            }
-            else if(verb.equalsIgnoreCase("Un-equip")){
-
-            }
-            else if(verb.equalsIgnoreCase("commands")){
-
-            }
             else if(verb.equalsIgnoreCase("Exit")){
                 System.exit(0);
+            }
+            else if(verb.equalsIgnoreCase("Locked")){
+                gameView.isLocked(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getRoomID()).getIsLocked());
             }
             else{
                 gameView.wrongCommand();
@@ -87,16 +72,50 @@ public class GameController {
             object = command[1];
             if(verb.equalsIgnoreCase("Move")){
                 if(object.equalsIgnoreCase("North")){
-                    gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getN()));
+                    if(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getN()).getIsLocked()){
+                        gameView.lockedRoom();
+                    }
+                    else {
+                        gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getN()));
+                    }
                 }
                 else if(object.equalsIgnoreCase("East")){
-                    gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getE()));
+                    if(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getN()).getIsLocked()){
+                        gameView.lockedRoom();
+                    }
+                    else {
+                        gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getE()));
+                    }
                 }
                 else if(object.equalsIgnoreCase("South")){
-                    gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getS()));
+                    if(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getN()).getIsLocked()){
+                        gameView.lockedRoom();
+                    }
+                    else {
+                        gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getS()));
+                    }
                 }
                 else if(object.equalsIgnoreCase("West")){
-                    gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getW()));
+                    if(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getN()).getIsLocked()){
+                        gameView.lockedRoom();
+                    }
+                    else {
+                        gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getW()));
+                    }
+                }
+            }
+            else if(verb.equalsIgnoreCase("Solve")){
+                if(object.equalsIgnoreCase("Puzzle")){
+                    if(gameModel.getPlayer().getCurRoom().getPuzzle() == null){
+                        gameView.noPuzzle();
+                    }
+                    else {
+                        gameView.displayPuzzle(gameModel.getPlayer().getCurRoom().getPuzzle().getName(), gameModel.getPlayer().getCurRoom().getPuzzle().getDesc());
+                        gameView.puzzleResults(gameModel.getPlayer().solvePuzzle());
+                        if (!gameModel.getPlayer().getCurRoom().getPuzzle().isSolved()) {
+                            gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getPrevRoom().getRoomID()));
+                        }
+                    }
                 }
             }
             else {

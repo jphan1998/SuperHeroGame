@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.Map;
+import java.util.Scanner;
 import java.util.TreeMap;
 
 public class Player {
@@ -29,7 +30,7 @@ public class Player {
         if (gameMap.getGameMap().containsKey(roomId))
         {
             curRoom.setVisited(true);
-            prevRoom = this.curRoom;
+            prevRoom = curRoom;
             this.curRoom = gameMap.getRoom(roomId);
             room = "You are now in " + curRoom.getName() + "\n" + curRoom.getDescription();
             return room;
@@ -38,6 +39,25 @@ public class Player {
         {
             return "No room";
         }
+    }
+
+    public String solvePuzzle() {
+        int prevAttempt = curRoom.getPuzzle().getAttempts();
+        if (!curRoom.getPuzzle().isSolved()) {
+            Scanner in = new Scanner(System.in);
+            for (int i = curRoom.getPuzzle().getAttempts(); i > 0; i--) {
+                String input = in.nextLine();
+                if (!curRoom.getPuzzle().getSolution().toLowerCase().contains(input.toLowerCase())) {
+                    System.out.println("The answer you have provided is wrong, you still have " + (i - 1) + " left. Try one more time.");
+                } else {
+                    curRoom.getPuzzle().setSolved(true);
+                    curRoom.setPuzzle(null);
+                    return "Solved";
+                }
+            }
+            curRoom.getPuzzle().setAttempts(prevAttempt);
+        }
+        return "Failed";
     }
 
 

@@ -7,6 +7,7 @@ public class Puzzle {
     String solution;
     int attempts;
     String unlockRoom;
+    boolean solved;
 
     public Puzzle(String aName, String aDesc, String aHint, String aSolution, int aAttempts, String aUnlock){
         this.name = aName;
@@ -15,6 +16,7 @@ public class Puzzle {
         this.solution = aSolution;
         this.attempts = aAttempts;
         this.unlockRoom = aUnlock;
+        solved = false;
     }
 
     //Getters and Setters
@@ -65,5 +67,13 @@ public class Puzzle {
 
     public void setUnlockRoom(String unlockRoom) {
         this.unlockRoom = unlockRoom;
+    }
+
+    public boolean isSolved() {
+        return solved;
+    }
+
+    public void setSolved(boolean solved) {
+        this.solved = solved;
     }
 }

@@ -29,6 +29,10 @@ public class GameView {
         }
     }
 
+    public void lockedRoom(){
+        System.out.println(ANSI_RED + "This direction is blocked off! You may need to complete a task to unlock it." + ANSI_RESET);
+    }
+
     public void wrongCommand(){
         System.out.println(ANSI_RED + "Please only enter the commands given." + ANSI_RESET);
     }
@@ -39,5 +43,26 @@ public class GameView {
 
     public void updateSearch(String search){
         System.out.println(ANSI_BLUE + search + ANSI_RESET);
+    }
+
+    public void displayPuzzle(String name, String desc){
+        System.out.println(ANSI_BLUE + name + ANSI_RESET);
+        System.out.println(ANSI_CYAN + desc.replaceAll("[.?!]\\s?", "$0\n") + ANSI_RESET);
+    }
+
+    public void puzzleResults(String result){
+        if(result.equalsIgnoreCase("Solved")){
+            System.out.println(ANSI_GREEN + "You did it! You solved the puzzle!" + ANSI_RESET);
+        }
+        if(result.equalsIgnoreCase("Failed")){
+            System.out.println(ANSI_RED + "You have failed the puzzle, please try it again later." + ANSI_RESET);
+        }
+    }
+
+    public void noPuzzle(){
+        System.out.println(ANSI_RED + "There is no puzzle here!" + ANSI_RESET);
+    }
+    public void isLocked(boolean locked){
+        System.out.println("It is " + locked);
     }
 }
