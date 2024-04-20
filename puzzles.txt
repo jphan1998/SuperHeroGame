@@ -15,15 +15,17 @@ There seems to have been something scribbled on the eastern wall, on it there ar
 F1R6~
 
 F1R6~
-d~
-d~
+Locked Gate~
+It seems the gate is locked, even with all the strength you can muster up, the iron bars would not budge or show any signs of bending. Upon expecting the entrance though, it seems that the lock has an opening that a key might fit into.~
+Not just any key will do, you might want to try the key that resembles the first monster of this floor.~
 Skeleton Key~
 3~
 0~
 
 F2R7~
-~
-~
+Missing Piece~
+Upon searching around the heaps of bones, eventually you find yourself at one of the walls lined with the skeletal remains of skulls, their hollow sockets showing nothing but darkness. At the center of the wall, there is a carving that looks like it could hold something.~
+It seems the shape of the wall indent could possibly fit a gem or a stone.~
 Runestone~
 3~
 F2R5~
@@ -38,8 +40,16 @@ C A D~
 
 
 F3R6~
-~
-~
-Lion Goat Snake~
-
+False Idol~
+Looking at the different heads mounted on the wall, it seems like they can be pushed in. Some of the animal heads seem familiar, but there is one that is out of place. The heads present on the walls are: Lion Serpent Owl and Goat .~
+The heads resemble a monster found on this floor, it could be possible the key is the head that does not belong.~
+Owl~
+2~
 F3R7~
+
+F3R8~
+Two Sloth's Challenge~
+There are two sloths guarding two doors, one leads to the treasure of the secret vault, the other leads to death. One Sloth only tells the truth, and the other tells a lie. You ask Sloth A which door would Sloth B pick and his response: "My brother will tell you Door A is the treasure."~
+If Sloth A is the liar, then it must be the other door. If Sloth A is telling the truth, then Sloth B would lie about Door A being safe!
+B~
+0~
