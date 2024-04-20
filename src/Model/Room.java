@@ -44,7 +44,7 @@ public class Room
             //checks puzzle
             if (puzzle != null)
             {
-                searchResult.append("There is a puzzle here! ").append(puzzle.getDesc()).append(".");
+                searchResult.append("There is a puzzle here! ");
             }
             if (!inventory.isEmpty())
             {
