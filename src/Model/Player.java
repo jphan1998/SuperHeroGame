@@ -14,6 +14,8 @@ public class Player {
     private Map<String, Item> gear;
 
     public Player(String aName, MapReader aGameMap){
+        HP = 15;
+        CR = 2;
         this.name = aName;
         this.gameMap = aGameMap;
         curRoom = gameMap.getRoom("F1R1");

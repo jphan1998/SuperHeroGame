@@ -15,7 +15,9 @@ public class GameController {
         this.gameModel = aGameModel;
         this.gameView = aGameView;
         gameStart();
-        gamePlay();
+        while(gameModel.getPlayer().getHP() > 0) {
+            gamePlay();
+        }
     }
 
     public GameView getGameView() {
@@ -45,7 +47,6 @@ public class GameController {
         String input = in.nextLine();
         String[] command = input.split(" ", 2);
         verb = command[0];
-
         if (command.length == 1) {
             if (verb.equalsIgnoreCase("n")) {
 
