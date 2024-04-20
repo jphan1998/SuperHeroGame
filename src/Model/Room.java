@@ -10,19 +10,20 @@ public class Room
         private String roomID;
         private boolean isVisited;
         private boolean isLocked;
-        private int n;
-        private int e;
-        private int s;
-        private int w;
+        private String n;
+        private String e;
+        private String s;
+        private String w;
         private Puzzle puzzle;
         private Monster monster;
         private Map<String, Item> inventory;
 
-        public Room(String roomID ,String roomName, String roomDescription, boolean isLocked, int aN, int aE, int aS, int aW)
+        public Room(String roomID ,String roomName, String roomDescription,boolean aVisited, boolean isLocked, String aN, String aE, String aS, String aW)
         {
             this.roomID = roomID;
             this.roomName = roomName;
             this.roomDescription = roomDescription;
+            this.isVisited = aVisited;
             this.isLocked = isLocked;
             this.n = aN;
             this.e = aE;
@@ -117,35 +118,35 @@ public class Room
             this.puzzle = puzzle;
         }
 
-        public int getN() {
+        public String getN() {
             return n;
         }
 
-        public void setN(int n) {
+        public void setN(String n) {
             this.n = n;
         }
 
-        public int getE() {
+        public String getE() {
             return e;
         }
 
-        public void setE(int e) {
+        public void setE(String e) {
             this.e = e;
         }
 
-        public int getS() {
+        public String getS() {
             return s;
         }
 
-        public void setS(int s) {
+        public void setS(String s) {
             this.s = s;
         }
 
-        public int getW() {
+        public String getW() {
             return w;
         }
 
-        public void setW(int w) {
+        public void setW(String w) {
             this.w = w;
         }
 

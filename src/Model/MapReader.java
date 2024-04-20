@@ -8,6 +8,11 @@ public class MapReader {
 
     private HashMap<String, Room> gameMap;
 
+    public MapReader() throws FileNotFoundException {
+        gameMap = new HashMap<>();
+        readMap("Room.txt");
+    }
+
     public void readMap(String file) throws FileNotFoundException {
 
         File reader = new File(file); //Creates a file class that can be run through the scanner.
@@ -19,12 +24,13 @@ public class MapReader {
             String id = mapReader.next();
             String name = mapReader.next();
             String desc = mapReader.next();
+            boolean visited = mapReader.nextBoolean();
             boolean locked = mapReader.nextBoolean();
-            int n = mapReader.nextInt();
-            int e = mapReader.nextInt();
-            int s = mapReader.nextInt();
-            int w = mapReader.nextInt();
-            aMaps.put(id, new Room(id, name, desc, locked, n, e, s, w));
+            String n = mapReader.next();
+            String e = mapReader.next();
+            String s = mapReader.next();
+            String w = mapReader.next();
+            aMaps.put(id, new Room(id, name, desc, visited, locked, n, e, s, w));
         }
         this.gameMap = aMaps;
     }
@@ -35,7 +41,7 @@ public class MapReader {
         monsterReader.useDelimiter("[~\r\n]+"); //Delimiter to separate the text file, removes carriage return, new line, and '~'.
 
         while (monsterReader.hasNext()) {
-            int id = Integer.parseInt(monsterReader.next().trim());
+            String id = monsterReader.next();
             String name = monsterReader.next();
             String desc = monsterReader.next();
             int CR = monsterReader.nextInt();
@@ -81,6 +87,10 @@ public class MapReader {
             itemsMap.get(roomId).put(itemName, itemDescription);
         }
         return itemsMap;
+    }
+
+    public Room getRoom (String id){
+        return gameMap.get(id);
     }
 
     public void saveGame(String filename) {
