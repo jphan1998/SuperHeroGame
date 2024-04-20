@@ -52,6 +52,23 @@ public class MapReader {
         }
     }
 
+    public void readPuzzle(String file) throws FileNotFoundException {
+        File reader = new File(file); //Creates a file class that can be run through the scanner.
+        Scanner puzzleReader = new Scanner(reader);
+        puzzleReader.useDelimiter("[~\r\n]+"); //Delimiter to separate the text file, removes carriage return, new line, and '~'.
+
+        while (puzzleReader.hasNext()) {
+            String id = puzzleReader.next();
+            String name = puzzleReader.next();
+            String desc = puzzleReader.next();
+            String hint = puzzleReader.next();
+            String answer = puzzleReader.next();
+            int attempts = puzzleReader.nextInt();
+            String unlock = puzzleReader.next();
+            gameMap.get(id).setPuzzle(new Puzzle(name, desc, hint, answer, attempts, unlock));
+        }
+    }
+
     public HashMap<Integer, HashMap<String, String>> readItems(String file) throws FileNotFoundException {
         HashMap<Integer, HashMap<String, String>> itemsMap = new HashMap<>();
 
