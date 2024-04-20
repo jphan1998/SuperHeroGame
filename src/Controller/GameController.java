@@ -38,7 +38,7 @@ public class GameController {
 
     public void gameStart() {
         gameView.welcome();
-        gameView.updateView("You are now in " + gameModel.getPlayer().getCurRoom().getName());
+        gameView.updateView("You are now in " + gameModel.getPlayer().getCurRoom().getName() + "\n" + gameModel.getPlayer().getCurRoom().getDescription());
     }
 
     public void gamePlay(){

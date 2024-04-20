@@ -11,11 +11,12 @@ public class GameView {
     public static final String ANSI_RESET = "\u001B[0m";
 
     public void welcome(){
-        System.out.println("Welcome to Dungeon Adventure!");
+        System.out.println(ANSI_CYAN + "Welcome to Dungeon Adventure!\n" + ANSI_RESET);
     }
 
     public void updateView(String view){
         System.out.println(view.replaceAll("[.?!]\\s?","$0\n"));
+        System.out.println("--------------------------------------------");
     }
 
     public void wrongCommand(){
