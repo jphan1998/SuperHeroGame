@@ -29,4 +29,20 @@ public class MapReader {
         }
         this.gameMap = aMaps;
     }
+
+    public void saveGame(String filename) {
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(filename);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(gameMap);
+            objectOutputStream.close();
+            fileOutputStream.close();
+            System.out.println("Game saved successfully!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
+
+
