@@ -83,19 +83,31 @@ public class GameController {
             if(verb.equalsIgnoreCase("Move")){
                 if(object.equalsIgnoreCase("North")){
                     gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getN()));
+                    if(gameModel.getPlayer().getCurRoom().getVisited()){
+                        gameView.hasVisited();
+                    }
                 }
                 else if(object.equalsIgnoreCase("East")){
                     gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getE()));
+                    if(gameModel.getPlayer().getCurRoom().getVisited()){
+                        gameView.hasVisited();
+                    }
                 }
                 else if(object.equalsIgnoreCase("South")){
                     gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getS()));
+                    if(gameModel.getPlayer().getCurRoom().getVisited()){
+                        gameView.hasVisited();
+                    }
                 }
                 else if(object.equalsIgnoreCase("West")){
                     gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getW()));
+                    if(gameModel.getPlayer().getCurRoom().getVisited()){
+                        gameView.hasVisited();
+                    }
                 }
             }
             else {
-
+                gameView.wrongCommand();
             }
         }
     }
