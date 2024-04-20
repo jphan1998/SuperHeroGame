@@ -5,24 +5,6 @@ Prisoner skeleton with red eyes glowing with hate. Early encounter to introduce 
 1~
 12~
 
-F1R2~
-
-F1R3~
-
-F1R4~
-
-F1R5~
-
-F1R6~
-
-F1R7~
-
-F2R1~
-
-F2R2~
-
-F2R3~
-
 F2R4~
 F2M1~
 Golem~
@@ -44,14 +26,6 @@ Undead, skeletal, resistant to physical damage. Mid-game enemy encountered in cr
 4~
 20~
 
-F2R7~
-
-F2R8~
-
-F3R1~
-
-F3R2~
-
 F3R3~
 F3M2~
 Chimera~
@@ -66,10 +40,6 @@ Ghostly, female spirit, emits chilling cries. Mid to late-game enemy encountered
 6~
 20~
 
-F3R5~
-
-F3R6~
-
 F3R7~
 F3M3~
 Dragon~
@@ -77,4 +47,3 @@ Massive, winged reptile, breathes fire or other elemental attacks. Final boss en
 10~
 32~
 
-R3R8~
