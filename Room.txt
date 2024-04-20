@@ -118,7 +118,7 @@ true~
 F2R8~
 F2R4~
 
-F2F6~
+F2R6~
 Rat Warren~
 Venture into the Rat Warren, a labyrinth of twisting tunnels and hidden chambers that echo with the scuttling of tiny claws. Dusty cobwebs cling to the rough-hen walls, and the air is thick with the musky scent of vermin. Here, amidst piles of debris and discarded bones, adventurers must navigate the maze-like passages and beware the hungry eyes that watch from the shadows. In the depths of the Rat Warren, you face off against the menacing Skeleton Warden, an undead guardian that stands between them and the path to the Boneyard room. To gain access to the Boneyard, you must defeat the Skeleton Warden to continue your journey deeper into the dungeon's depths.~
 false~

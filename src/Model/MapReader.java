@@ -11,6 +11,7 @@ public class MapReader {
     public MapReader() throws FileNotFoundException {
         gameMap = new HashMap<>();
         readMap("Room.txt");
+        readMonster("Monster.txt");
     }
 
     public void readMap(String file) throws FileNotFoundException {
@@ -46,7 +47,8 @@ public class MapReader {
             String desc = monsterReader.next();
             int CR = monsterReader.nextInt();
             int HP = monsterReader.nextInt();
-            gameMap.get(id).setMonster(new Monster(name, desc, CR, HP));
+            String unlock = monsterReader.next();
+            gameMap.get(id).setMonster(new Monster(name, desc, CR, HP, unlock));
         }
     }
 

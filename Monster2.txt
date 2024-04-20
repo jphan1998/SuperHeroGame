@@ -1,0 +1,13 @@
+F1R1~
+Skeleton~
+Prisoner skeleton with red eyes glowing with hate.~
+1~
+12~
+F1R7~
+
+F2R4~
+Golem~
+Massive, made of stone or clay, slow-moving but highly durable.~
+4~
+16~
+F2R6~

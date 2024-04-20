@@ -60,7 +60,7 @@ public class GameController {
 
             } else if (verb.equalsIgnoreCase("W")) {
 
-            } else if (verb.equalsIgnoreCase("Explore"))
+            } else if (verb.equalsIgnoreCase("Search"))
             {
                 gameView.updateView(gameModel.getPlayer().getCurRoom().searchRoom());
             }
