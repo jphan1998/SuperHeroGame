@@ -2,30 +2,38 @@ package Model;
 
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Room
     {
         private String roomName;
         private String roomDescription;
-        private int roomID;
+        private String roomID;
         private boolean isVisited;
-        private Map<String, String> exits;
-        private List<String> inventory;
-        private List<String> puzzle;
+        private Map<String, Item> inventory;
+        private Puzzle puzzle;
         private boolean isLocked;
-        private boolean hasMonster;
 
-        public Room(int roomID ,String roomName, String roomDescription, boolean isVisited, Map<String, String>exits)
+        private int n;
+
+        private int e;
+
+        private int s;
+
+        private int w;
+
+        public Room(String roomID ,String roomName, String roomDescription, boolean isLocked, int aN, int aE, int aS, int aW)
         {
             this.roomID = roomID;
             this.roomName = roomName;
             this.roomDescription = roomDescription;
             this.isVisited = false;
-            this.exits = exits;
-            this.inventory = null;
-            this.puzzle = null;
-            this.isLocked = false;
-            this.hasMonster = false;
+            inventory = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
+            this.isLocked = isLocked;
+            this.n = aN;
+            this.e = aE;
+            this.s = aS;
+            this.w = aW;
         }
 
         public String searchRoom()
@@ -46,11 +54,11 @@ public class Room
         }
 
         // getter/setter for roomID
-        public int getRoomID()
+        public String getRoomID()
         {
             return roomID;
         }
-        public void setRoomID(int roomID)
+        public void setRoomID(String roomID)
         {
             this.roomID = roomID;
         }
@@ -75,21 +83,6 @@ public class Room
             this.roomDescription = roomDescription;
         }
 
-        public Map<String, String> getExits()
-        {
-            return exits;
-        }
-
-        // getter/setter for puzzle
-        public List<String> getPuzzle()
-        {
-            return puzzle;
-        }
-        public void setPuzzle(List<String> puzzle)
-        {
-            this.puzzle = puzzle;
-        }
-
         // getter/setter for isVisited
         public boolean getVisited()
         {
@@ -101,14 +94,6 @@ public class Room
         }
 
         // getter/setter for hasMonster
-        public boolean getHasMonster()
-        {
-            return hasMonster;
-        }
-        public boolean isHasMonster()
-        {
-            return hasMonster;
-        }
 
         //getter/setter for isLocked
         public boolean getIsLocked()
@@ -118,6 +103,54 @@ public class Room
         public boolean isLocked()
         {
             return isLocked;
+        }
+
+        public Map<String, Item> getInventory() {
+            return inventory;
+        }
+
+        public void setInventory(Map<String, Item> inventory) {
+            this.inventory = inventory;
+        }
+
+        public Puzzle getPuzzle() {
+            return puzzle;
+        }
+
+        public void setPuzzle(Puzzle puzzle) {
+            this.puzzle = puzzle;
+        }
+
+        public int getN() {
+            return n;
+        }
+
+        public void setN(int n) {
+            this.n = n;
+        }
+
+        public int getE() {
+            return e;
+        }
+
+        public void setE(int e) {
+            this.e = e;
+        }
+
+        public int getS() {
+            return s;
+        }
+
+        public void setS(int s) {
+            this.s = s;
+        }
+
+        public int getW() {
+            return w;
+        }
+
+        public void setW(int w) {
+            this.w = w;
         }
     }
 
