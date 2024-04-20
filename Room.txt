@@ -78,7 +78,6 @@ false~
 F2R2~
 0~
 
-
 F2R2~
 Tunnel Entrance~
 Enter the Tunnel Entrance, a narrow passageway that delves deeper into the heart of the dungeon's darkness. Dusty cobwebs cling to the ancient stone walls, and faint symbols of forgotten power are etched into the crumbling rock. Here, the air is heavy with the scent of decay, and the echoes of distant whispers seem to reverberate through the shadows. You a mysterious gate lacking a conventional handle. Upon closer inspection, players may notice a slot shaped for a spear-like object. To unlock the door, adventurers must first solve a complex puzzle, deciphering symbols adorning the walls to reveal the location of the matching keystone. When inserted, the keystone illuminates in a pattern mirroring the door's symbols, unveiling the path forward amidst ancient mechanisms and cryptic symbols.~
@@ -108,7 +107,6 @@ F2R2~
 F2R5~
 0~
 F2R6~
-
 
 F2R5~
 Abandoned Mineshaft~
@@ -229,5 +227,3 @@ false~
 0~
 0~
 F3R6~
-
-          

@@ -7,7 +7,7 @@ Echo~
 F1R4~
 
 F1R5~
-
+Numeric Code~
 Embark on a journey of discovery as you unravel the enigmatic clues hidden within the chamber's confines. Piece together the fragments of a forgotten code, etched into the very walls of the dungeon, to unlock the ancient chest concealed within and claim the treasures that lie dormant within its depths. The room contains a locked chest with a numeric keypad.~
 There seems to have been something scribbled on the eastern wall, on it there are some symbols 'V II IV I', maybe this could help with unlock the numeric pad.~
 5241~
@@ -17,21 +17,22 @@ F1R6~
 F1R6~
 d~
 d~
-Use Skeleton Key~
+Skeleton Key~
 3~
 0~
 
 F2R7~
 ~
 ~
-Use Runestone~
+Runestone~
 3~
 F2R5~
 
 F2R8~
+Underground Lake Cipher~
 Venture deeper into the labyrinthine corridors of the dungeon, where arcane symbols dance upon the walls like whispers of forgotten magic. Sharpen your wits and hone your instincts as you decipher the cryptic patterns woven into the very fabric of the chamber, unlocking the gateway to untold wonders that await beyond. You find scribbling on the walls: A A A B A _ _ _~
-~
-Use Teleporting Crystal~
+It seems like there is a pattern here, possibly finding the missing letters to the pattern should unlock the gateway.~
+C A D~
 3~
 0~
 
