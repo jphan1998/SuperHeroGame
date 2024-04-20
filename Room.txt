@@ -10,7 +10,7 @@ F1R2~
 
 F1R2~
 Guard Room~
-Traverse the narrow passageway of the Guard Room, where the shadows dance eerily amidst the glow of torchlight. The torch-lined walls, casting flickering shadows across the worn stone floor, leading the way to the mysteries that await beyond. To the North, a wooden door beckons, granting passage to the Warden's Model Room, where treasures gleam amidst the dust of forgotten memories. To the West, a passage leads to the Prison Cells (West Wing), where the whispers of the forgotten echo through the dank corridors. And to the East, another corridor awaits, leading to the Prison Cells (East Wing), where shadows linger and secrets lie hidden in the darkness.~
+Traverse the narrow passageway of the Guard Room, where the shadows dance eerily amidst the glow of torchlight. The torch-lined walls, casting flickering shadows across the worn stone floor, leading the way to the mysteries that await beyond. To the North, a wooden door beckons, granting passage to the Warden's Room, where treasures gleam amidst the dust of forgotten memories. To the West, a passage leads to the Prison Cells (West Wing), where the whispers of the forgotten echo through the dank corridors. And to the East, another corridor awaits, leading to the Prison Cells (East Wing), where shadows linger and secrets lie hidden in the darkness.~
 false~
 false~
 F1R5~
@@ -40,7 +40,7 @@ F1R2~
 
 F1R5~
 Wardens Room~
-Step into the Warden's Room, a chamber steeped in history and guarded by the echoes of the past. Within, treasures gleam amidst the dust of forgotten memories, tempting adventurers with promises of riches. Proceed with caution, for within the room's confines lies the allure of both fortune and peril. To reach the fortune inside the chest players must find the numeric key to open. Failing to do so results in bad fortune. To the North, an iron gate bars the way forward, hinting at secrets yet to be revealed beyond its imposing presence. To the South, the passage leads back to the Guard Model Room, offering a retreat to familiar surroundings amidst the labyrinthine corridors of the dungeon.~
+Step into the Warden's Room, a chamber steeped in history and guarded by the echoes of the past. Within, treasures gleam amidst the dust of forgotten memories, tempting adventurers with promises of riches. Proceed with caution, for within the room's confines lies the allure of both fortune and peril. To reach the fortune inside the chest players must find the numeric key to open. Failing to do so results in bad fortune. To the North, an iron gate bars the way forward, hinting at secrets yet to be revealed beyond its imposing presence. To the South, the passage leads back to the Guard Room, offering a retreat to familiar surroundings amidst the labyrinthine corridors of the dungeon.~
 false~
 false~
 F1R6~
