@@ -24,13 +24,13 @@ public class Room
             this.roomID = roomID;
             this.roomName = roomName;
             this.roomDescription = roomDescription;
-            this.isVisited = false;
-            inventory = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
             this.isLocked = isLocked;
             this.n = aN;
             this.e = aE;
             this.s = aS;
             this.w = aW;
+            this.isVisited = false;
+            inventory = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
         }
 
         public String searchRoom()
