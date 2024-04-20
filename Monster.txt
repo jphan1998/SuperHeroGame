@@ -1,49 +1,49 @@
 F1R1~
 F1M1~
 Skeleton~
-Prisoner skeleton with red eyes glowing with hate. Early encounter to introduce combat mechanics and basic monster behavior.~
+Prisoner skeleton with red eyes glowing with hate.~
 1~
 12~
 
 F2R4~
 F2M1~
 Golem~
-Massive, made of stone or clay, slow-moving but highly durable. Late-game guardian encountered in ancient ruins or elemental chambers, requiring strategy to defeat due to its durability and special ability.~
+Massive, made of stone or clay, slow-moving but highly durable.~
 4~
 16~
 
 F2R5~
 F2M2~
 Spectral Wraith~
-Ethereal, floating, capable of passing through walls. Mid to late-game enemy encountered in haunted corridors or spectral realms, posing a threat with their ability to bypass obstacles.~
+Ethereal, floating, capable of passing through walls.~
 4~
 20~
 
 F2R6~
 F2M3~
 Skeleton Warden~
-Undead, skeletal, resistant to physical damage. Mid-game enemy encountered in crypts or tombs, challenging players with their resilience and special ability.~
+Undead, skeletal, resistant to physical damage.~
 4~
 20~
 
 F3R3~
 F3M2~
 Chimera~
-Hybrid creature with multiple animal features (lion, goat, serpent), aggressive and pow Late-game boss encounter, requiring strategic coordination and exploiting weaknesses to defeat.~
+Hybrid creature with multiple animal features (lion, goat, serpent), aggressive and powerful.~
 7~
 24~
 
 F3R4~
 F3M1~
 Banshee~
-Ghostly, female spirit, emits chilling cries. Mid to late-game enemy encountered in haunted areas or cursed chambers, challenging players with their debilitating special ability.~
+Ghostly, female spirit, emits chilling cries.~
 6~
 20~
 
 F3R7~
 F3M3~
 Dragon~
-Massive, winged reptile, breathes fire or other elemental attacks. Final boss encounter, providing the ultimate challenge for players.~
+Massive, winged reptile, breathes fire or other elemental attacks.~
 10~
 32~
 

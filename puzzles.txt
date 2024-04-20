@@ -16,11 +16,23 @@ F1R6~
 d~
 d~
 Use Skeleton Key~
+3~
+0~
 
-F2R2~
+F2R7~
+~
+~
+Use Runestone~
+3~
+F2R5~
 
 F2R8~
 Venture deeper into the labyrinthine corridors of the dungeon, where arcane symbols dance upon the walls like whispers of forgotten magic. Sharpen your wits and hone your instincts as you decipher the cryptic patterns woven into the very fabric of the chamber, unlocking the gateway to untold wonders that await beyond. You find scribbling on the walls: A A A B A _ _ _~
+~
+Use Teleporting Crystal~
+3~
+0~
+
 
 
 
