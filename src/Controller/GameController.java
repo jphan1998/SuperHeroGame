@@ -79,7 +79,19 @@ public class GameController {
         }
         if (command.length == 2){
             object = command[1];
-            if(verb.equalsIgnoreCase("Pickup")){
+            if(verb.equalsIgnoreCase("Move")){
+                if(object.equalsIgnoreCase("North")){
+                    gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getN()));
+                }
+                else if(object.equalsIgnoreCase("East")){
+                    gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getE()));
+                }
+                else if(object.equalsIgnoreCase("South")){
+                    gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getS()));
+                }
+                else if(object.equalsIgnoreCase("West")){
+                    gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getW()));
+                }
             }
             else {
 

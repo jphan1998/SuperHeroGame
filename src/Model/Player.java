@@ -21,17 +21,20 @@ public class Player {
         gear = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
     }
 
-    private void move(String roomId)
+    public String move(String roomId)
     {
+        String room;
         curRoom.setVisited(true);
         if (gameMap.getGameMap().containsKey(roomId))
         {
             prevRoom = this.curRoom;
             this.curRoom = gameMap.getRoom(roomId);
+            room = "You are now in " + curRoom.getName() + "\n" + curRoom.getDescription();
+            return room;
         }
         else
         {
-            System.out.println("There is no room in that direction");
+            return "Wrong";
         }
     }
 

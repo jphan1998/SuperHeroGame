@@ -15,7 +15,7 @@ public class GameView {
     }
 
     public void updateView(String view){
-        System.out.println(view.replaceAll("[.?!]\\s?","$0\\n"));
+        System.out.println(view.replaceAll("[.?!]\\s?","$0\n"));
     }
 
     public void wrongCommand(){
