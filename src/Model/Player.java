@@ -88,46 +88,17 @@ public class Player {
         this.gear = gear;
     }
 
-    public void commands(String command)
-    {
-        switch (command.toLowerCase())
-        {
-            case "n":
-            case "north":
-                move(curRoom.getN());
-                break;
-            case "s":
-            case "south":
-                move(curRoom.getS());
-                break;
-            case "e":
-            case "east":
-                move(curRoom.getE());
-                break;
-            case "w":
-            case "west":
-                move(curRoom.getW());
-                break;
-            case "search":
-                System.out.println(curRoom.searchRoom());
-                break;
-            case "inventory":
-                System.out.println("Your inventory contains: " + inventory.values());
-                break;
-            case "help":
-                System.out.println("Valid commands are: n, north, s, south, e, east, w, west, search, inventory, help");
-                break;
-            default:
-                System.out.println("Invalid command. Type 'help' for a list of valid commands.");
-                break;
-        }
-    }
     private void move(String roomId)
     {
         if (roomId != null && !roomId.isEmpty())
         {
          prevRoom = curRoom;
-         curRoom = gameMap.getRoom(roomId);
+         Room nextRoom = gameMap.getRoom(roomId);
+         if (!nextRoom.getVisited())
+         {
+             nextRoom.setVisited(true);
+         }
+         curRoom = nextRoom;
         }
         else
         {
