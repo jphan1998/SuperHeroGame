@@ -58,7 +58,7 @@ public class Room
             }
             if (searchResult.length() == 0)
             {
-                searchResult.append("You dont' see anything interesting here.");
+                searchResult.append("You don't see anything interesting here.");
             }
             return searchResult.toString();
         }
