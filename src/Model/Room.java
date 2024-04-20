@@ -35,19 +35,32 @@ public class Room
 
         public String searchRoom()
         {
-            // Implementation for searching the room
-            return null;
-        }
-
-        public String currentRoom()
-        {
-            // Implementation for displaying information about the current room
-            return null;
-        }
-
-        public void exitRoom()
-        {
-            // Implementation for exiting the current room
+            StringBuilder searchResult = new StringBuilder();
+            //checks for monster
+            if (monster != null)
+            {
+                searchResult.append("There is a monster here! ").append(monster.getName()).append("Description: ").append(monster.getDesc()).append(".");
+            }
+            //checks puzzle
+            if (puzzle != null)
+            {
+                searchResult.append("There is a puzzle here! ").append(puzzle.getDesc()).append(".");
+            }
+            if (!inventory.isEmpty())
+            {
+                searchResult.append("You see some items here: ");
+                for (Map.Entry<String, Item> item : inventory.entrySet())
+                {
+                    searchResult.append(item.getValue().getItemName()).append(", ");
+                }
+                //remove the last comma and space
+                searchResult.setLength(searchResult.length() - 2);
+            }
+            if (searchResult.length() == 0)
+            {
+                searchResult.append("You dont' see anything interesting here.");
+            }
+            return searchResult.toString();
         }
 
         // getter/setter for roomID
