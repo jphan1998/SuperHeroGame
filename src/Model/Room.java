@@ -39,7 +39,7 @@ public class Room
             //checks for monster
             if (monster != null)
             {
-                searchResult.append("There is a monster here! ").append(monster.getName()).append(" Description: ").append(monster.getDesc()).append(".");
+                searchResult.append("There is a monster here! ").append(monster.getName()).append(": ").append(monster.getDesc());
             }
             //checks puzzle
             if (puzzle != null)
