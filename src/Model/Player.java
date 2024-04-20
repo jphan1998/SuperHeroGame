@@ -4,8 +4,8 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Player {
-    String name;
-    MapReader gameMap;
+    private String name;
+    private MapReader gameMap;
     private Room curRoom;
     private Room prevRoom;
     private int HP;

@@ -15,6 +15,7 @@ public class GameController {
         this.gameModel = aGameModel;
         this.gameView = aGameView;
         gameStart();
+        gamePlay();
     }
 
     public GameView getGameView() {
