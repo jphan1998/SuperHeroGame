@@ -18,14 +18,14 @@ public class MapReader {
         mapReader.useDelimiter("[~]+"); //Delimiter to separate the text file, removes carriage return, new line, and '~'.
         while (mapReader.hasNext()) {
             String id = mapReader.next();
-            boolean seen = mapReader.nextBoolean();
             String name = mapReader.next();
             String desc = mapReader.next();
+            boolean locked = mapReader.nextBoolean();
             int n = mapReader.nextInt();
             int e = mapReader.nextInt();
             int s = mapReader.nextInt();
             int w = mapReader.nextInt();
-            aMaps.put(id, new Room(id, seen, name, desc, n, e, s, w));
+            aMaps.put(id, new Room(id, name, desc, locked, n, e, s, w));
         }
         this.gameMap = aMaps;
     }

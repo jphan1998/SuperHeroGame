@@ -10,17 +10,14 @@ public class Room
         private String roomDescription;
         private String roomID;
         private boolean isVisited;
-        private Map<String, Item> inventory;
-        private Puzzle puzzle;
         private boolean isLocked;
-
         private int n;
-
         private int e;
-
         private int s;
-
         private int w;
+        private Puzzle puzzle;
+        private Monster monster;
+        private Map<String, Item> inventory;
 
         public Room(String roomID ,String roomName, String roomDescription, boolean isLocked, int aN, int aE, int aS, int aW)
         {
@@ -151,6 +148,14 @@ public class Room
 
         public void setW(int w) {
             this.w = w;
+        }
+
+        public Monster getMonster() {
+            return monster;
+        }
+
+        public void setMonster(Monster monster) {
+            this.monster = monster;
         }
     }
 
