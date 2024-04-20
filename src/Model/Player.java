@@ -21,6 +21,20 @@ public class Player {
         gear = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
     }
 
+    private void move(String roomId)
+    {
+        curRoom.setVisited(true);
+        if (gameMap.getGameMap().containsKey(roomId))
+        {
+            prevRoom = this.curRoom;
+            this.curRoom = gameMap.getRoom(roomId);
+        }
+        else
+        {
+            System.out.println("There is no room in that direction");
+        }
+    }
+
 
     // Getters and Setters
 
@@ -88,21 +102,4 @@ public class Player {
         this.gear = gear;
     }
 
-    private void move(String roomId)
-    {
-        if (roomId != null && !roomId.isEmpty())
-        {
-         prevRoom = curRoom;
-         Room nextRoom = gameMap.getRoom(roomId);
-         if (!nextRoom.getVisited())
-         {
-             nextRoom.setVisited(true);
-         }
-         curRoom = nextRoom;
-        }
-        else
-        {
-            System.out.println("There is no room in that direction");
-        }
-    }
 }

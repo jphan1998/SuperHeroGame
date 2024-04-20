@@ -122,7 +122,14 @@ public class MapReader {
         }
     }
 
+    //Getters and Setters
+    public HashMap<String, Room> getGameMap() {
+        return gameMap;
+    }
 
+    public void setGameMap(HashMap<String, Room> gameMap) {
+        this.gameMap = gameMap;
+    }
 }
 
 
