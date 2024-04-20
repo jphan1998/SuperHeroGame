@@ -2,6 +2,8 @@ F1R5~
 Skeleton Key~
 The Skeleton Key is a mysterious and ancient artifact, crafted from darkened iron and adorned with intricate etchings of skulls and bones.~
 Item~
+Puzzle~
+
 F1R3~
 Health Potion~
 A small, glass vial containing a vibrant liquid with a faint, soothing glow. The liquid within sparkles with healing energy, promising relief from wounds and ailments.~
