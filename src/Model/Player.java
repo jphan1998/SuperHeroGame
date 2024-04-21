@@ -220,7 +220,11 @@ public class Player {
         if (inventory.get(name) instanceof Consumables){
             if(curRoom.getInventory().containsKey(name)) {
                 ((Consumables) curRoom.getInventory().get(name)).setcCount(((Consumables) curRoom.getInventory().get(name)).getcCount() - 1);
-                inventory.remove(name);
+                if(((Consumables) curRoom.getInventory().get(name)).getcCount() == 0 ){
+                    inventory.remove(name);
+                }else{
+
+                }
             }
             else{
                 curRoom.getInventory().put((inventory.get(name).getItemName()), inventory.get(name));
