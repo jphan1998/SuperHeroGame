@@ -71,6 +71,12 @@ public class Player {
                             return "NoItem";
                         }
                     }
+                    else if(input.equalsIgnoreCase("Skeleton Key")){
+                        return "use";
+                    }
+                    else if(input.equalsIgnoreCase("Runestone")){
+                        return "use";
+                    }
                 else if(!input.toLowerCase().contains(curRoom.getPuzzle().solution.toLowerCase())) {
                     System.out.println("The answer you have provided is wrong, you still have " + (i - 1) + " left. Try one more time.");
                 } else {

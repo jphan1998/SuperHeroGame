@@ -67,6 +67,9 @@ public class GameView {
         if(result.equalsIgnoreCase("NoItem")){
             System.out.println(ANSI_RED + "You do not have this item in your inventory! Please retrieve it before you can use it here." + ANSI_RESET);
         }
+        if(result.equalsIgnoreCase("use")){
+            System.out.println(ANSI_RED + "Please try use the item! (Put Use in front of the item)." + ANSI_RESET);
+        }
     }
 
     public void noPuzzle(){
@@ -80,7 +83,7 @@ public class GameView {
         if(item.equalsIgnoreCase("Wrong")){
             System.out.println(ANSI_RED + "You cannot equip that item! Try a different one!" + ANSI_RESET);
         }else{
-            System.out.println(ANSI_BLUE + "You have succesfully equipped: " + item + ANSI_RESET);
+            System.out.println(ANSI_BLUE + "You have successfully equipped: " + item + ANSI_RESET);
         }
     }
 
