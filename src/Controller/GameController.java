@@ -55,7 +55,14 @@ public class GameController implements java.io.Serializable {
         verb = command[0];
         if (command.length == 1) {
             if(verb.equalsIgnoreCase("Inventory") || verb.equalsIgnoreCase("I")){
-
+                if(gameModel.getPlayer().getInventory().isEmpty()){
+                    gameView.emptyInv();
+                }
+                else{
+                    for(String name : gameModel.getPlayer().getInventory().keySet()){
+                        gameView.viewInv(name);
+                    }
+                }
             } else if (verb.equalsIgnoreCase("Search"))
             {
                 gameView.updateSearch(gameModel.getPlayer().getCurRoom().searchRoom());

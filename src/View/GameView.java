@@ -98,5 +98,13 @@ public class GameView {
         }
     }
 
+    public void viewInv(String item){
+        System.out.println(item);
+    }
+
+    public void emptyInv(){
+        System.out.println(ANSI_RED + "There is nothing in your inventory!" + ANSI_RESET);
+    }
+
 
 }
