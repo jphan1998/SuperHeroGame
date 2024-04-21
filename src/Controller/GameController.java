@@ -225,7 +225,10 @@ public class GameController implements java.io.Serializable {
                     if ((gameModel.getPlayer().use(object).equalsIgnoreCase("hint"))) {
                         gameView.useItem(gameModel.getPlayer().use(object));
                         gameView.displayHint(gameModel.getPlayer().getCurRoom().getPuzzle().getHint());
-                    } else {
+                    }
+                    if ((gameModel.getPlayer().use(object).equalsIgnoreCase("sneak"))) {
+                        gameView.useItem(gameModel.getPlayer().use(object));
+                    }else {
                         gameView.useItem(gameModel.getPlayer().use(object));
                         gameView.updateView(gameModel.getPlayer().use(object));
                     }

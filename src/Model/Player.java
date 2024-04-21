@@ -200,6 +200,10 @@ public class Player {
             }
             else return "NoPuzzle";
         }
+        else if(name.equalsIgnoreCase("Invisibility Cloak")){
+            gameMap.getRoom("F3R6").setLocked(false);
+            return "sneak";
+        }
             return "Nothing";
     }
 

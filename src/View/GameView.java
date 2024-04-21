@@ -98,6 +98,9 @@ public class GameView {
         if(item.equalsIgnoreCase("NoPuzzle")){
             System.out.println(ANSI_RED + "There is no puzzle here!" + ANSI_RESET);
         }
+        if(item.equalsIgnoreCase("sneak")){
+            System.out.println(ANSI_BLUE + "It looks like you can now sneak past the Banshee, use this opportunity to get to the next room!" + ANSI_RESET);
+        }
     }
 
     public void con(String item){
