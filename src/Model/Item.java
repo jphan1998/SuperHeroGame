@@ -6,7 +6,7 @@ public class Item {
     private String ItemDescription;
 
 
-    public Item(String itemType, String itemName, String itemDescription) {
+    public Item(String itemName, String itemType, String itemDescription) {
         ItemType = itemType;
         ItemName = itemName;
         ItemDescription = itemDescription;

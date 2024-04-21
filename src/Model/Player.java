@@ -189,7 +189,7 @@ public class Player {
     public String pickUpItem(String name){
         inventory.put(curRoom.getInventory().get(name).getItemName(),curRoom.getInventory().get(name));
         curRoom.getInventory().remove(name);
-        return name;
+        return inventory.get(name).getItemName();
     }
 
     public void dropItem(String name){
