@@ -126,4 +126,23 @@ public class Player {
         this.gear = gear;
     }
 
+    public void consume(){
+        setHP(getHP()+5);
+        return;
+    }
+
+    public void equip(){
+        setCR(getCR()+3);
+        return;
+    }
+
+    public String read(){
+
+    }
+
+    public void use(){
+
+    }
+
+
 }

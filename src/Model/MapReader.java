@@ -70,9 +70,7 @@ public class MapReader {
         }
     }
 
-    public HashMap<Integer, HashMap<String, String>> readItems(String file) throws FileNotFoundException {
-        HashMap<Integer, HashMap<String, String>> itemsMap = new HashMap<>();
-
+    public void readItems(String file) throws FileNotFoundException {
         File reader = new File(file); // Creates a file class that can be run through the scanner.
         Scanner itemReader = new Scanner(reader);
         itemReader.useDelimiter("[~\r\n]+"); // Delimiter to separate the text file, removes carriage return, new line, and '~'.

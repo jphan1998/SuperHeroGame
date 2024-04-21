@@ -4,6 +4,7 @@ import Model.Item;
 
 public class Consumables extends Item {
 
+    Player player;
     int cAmount;
     int cCount;
 
@@ -13,8 +14,5 @@ public class Consumables extends Item {
         this.cCount = cCount;
     }
 
-    void consume(){
-
-    }
 
 }

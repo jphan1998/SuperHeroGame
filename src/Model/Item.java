@@ -6,14 +6,13 @@ public class Item {
     private String ItemName;
     private String ItemDescription;
 
+
     public Item(int roomID, String itemType, String itemName, String itemDescription) {
         this.roomID = roomID;
         ItemType = itemType;
         ItemName = itemName;
         ItemDescription = itemDescription;
     }
-
-
 
     public String getItemName() {
         return ItemName;
