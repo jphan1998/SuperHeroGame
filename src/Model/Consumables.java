@@ -8,7 +8,7 @@ public class Consumables extends Item {
     int cCount;
 
     public Consumables(String itemName, String itemDescription, String itemType, int cAmount, int cCount) {
-        super(itemType,itemName, itemDescription);
+        super(itemName, itemDescription, itemType);
         this.cAmount = cAmount;
         this.cCount = cCount;
     }

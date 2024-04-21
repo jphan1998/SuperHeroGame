@@ -16,7 +16,7 @@ public class Item {
         return ItemName;
     }
 
-    public String examineItem() {
+    public String getItemDescription() {
         return ItemDescription;
     }
 }

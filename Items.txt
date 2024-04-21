@@ -12,7 +12,7 @@ Consumable~
 10~
 1~
 
-F1R3~
+F1R7~
 Health Potion~
 A small, glass vial containing a vibrant liquid with a faint, soothing glow. The liquid within sparkles with healing energy, promising relief from wounds and ailments.~
 Room~
@@ -20,7 +20,7 @@ Consumable~
 10~
 1~
 
-F1R3~
+F2R2~
 Health Potion~
 A small, glass vial containing a vibrant liquid with a faint, soothing glow. The liquid within sparkles with healing energy, promising relief from wounds and ailments.~
 Room~
@@ -28,7 +28,7 @@ Consumable~
 10~
 1~
 
-F1R3~
+F2R5~
 Health Potion~
 A small, glass vial containing a vibrant liquid with a faint, soothing glow. The liquid within sparkles with healing energy, promising relief from wounds and ailments.~
 Room~
@@ -36,7 +36,7 @@ Consumable~
 10~
 1~
 
-F1R3~
+F2R8~
 Health Potion~
 A small, glass vial containing a vibrant liquid with a faint, soothing glow. The liquid within sparkles with healing energy, promising relief from wounds and ailments.~
 Room~
@@ -44,7 +44,7 @@ Consumable~
 10~
 1~
 
-F1R3~
+F3R2~
 Health Potion~
 A small, glass vial containing a vibrant liquid with a faint, soothing glow. The liquid within sparkles with healing energy, promising relief from wounds and ailments.~
 Room~
@@ -52,7 +52,7 @@ Consumable~
 10~
 1~
 
-F1R3~
+F3R3~
 Health Potion~
 A small, glass vial containing a vibrant liquid with a faint, soothing glow. The liquid within sparkles with healing energy, promising relief from wounds and ailments.~
 Room~

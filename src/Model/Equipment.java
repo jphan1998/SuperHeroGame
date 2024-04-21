@@ -7,7 +7,7 @@ public class Equipment extends Item {
     int eAmount;
 
     public Equipment(String itemName, String itemDescription, String itemType, int eAmount) {
-        super(itemType,itemName, itemDescription);
+        super(itemName, itemDescription, itemType);
         this.eAmount = eAmount;
     }
 

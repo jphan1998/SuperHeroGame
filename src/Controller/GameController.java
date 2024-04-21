@@ -199,6 +199,13 @@ public class GameController implements java.io.Serializable {
                 else{
                     gameView.noItem();
                 }
+            }else if(verb.equalsIgnoreCase("Examine")){
+                if(gameModel.getPlayer().getInventory().containsKey(object)){
+                    gameView.equip(gameModel.getPlayer().equip(object));
+                }
+                else{
+                    gameView.notInv();
+                }
             } else {
                 gameView.wrongCommand();
             }

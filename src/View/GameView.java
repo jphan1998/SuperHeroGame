@@ -70,8 +70,10 @@ public class GameView {
     public void equip(String item){
         if(item.equalsIgnoreCase("Wrong")){
             System.out.println(ANSI_RED + "You cannot equip that item! Try a different one!" + ANSI_RESET);
+        }else{
+            System.out.println(ANSI_BLUE + "You have succesfully equipped: " + item + ANSI_RESET);
         }
-        System.out.println(ANSI_BLUE + "You have succesfully equipped: " + item + ANSI_RESET);
+
     }
 
     public void noItem(){
