@@ -88,6 +88,7 @@ public class GameController {
                             gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getE()));
                         }
                     }
+                    else()
                 }
                 else if(object.equalsIgnoreCase("South")){
                     if(!gameModel.getPlayer().getCurRoom().getS().equalsIgnoreCase("O")){

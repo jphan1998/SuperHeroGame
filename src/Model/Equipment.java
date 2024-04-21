@@ -11,5 +11,11 @@ public class Equipment extends Item {
         this.eAmount = eAmount;
     }
 
+    public int geteAmount() {
+        return eAmount;
+    }
 
+    public void seteAmount(int eAmount) {
+        this.eAmount = eAmount;
+    }
 }

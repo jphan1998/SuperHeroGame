@@ -131,9 +131,9 @@ public class Player {
         return;
     }
 
-    public void equip(){
-        if(inventory.containsKey("Enchanted Dagger"){
-            setCR(getCR()+5);
+    public void equip(String name){
+        if(inventory.get(name) instanceof Equipment){
+            CR += ((Equipment) inventory.get(name)).geteAmount();
         }else if(){
 
         }
