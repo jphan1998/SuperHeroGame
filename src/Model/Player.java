@@ -55,6 +55,12 @@ public class Player {
                             if (object.toLowerCase().contains(curRoom.getPuzzle().solution.toLowerCase())) {
                                 curRoom.getPuzzle().setSolved(true);
                                 gameMap.getRoom(curRoom.getPuzzle().getUnlockRoom()).setLocked(false);
+                                if(!curRoom.getPuzzle().getInventory().isEmpty()){
+                                    for(String name : curRoom.getPuzzle().getInventory().keySet()){
+                                        curRoom.getInventory().put(name, curRoom.getInventory().get(name));
+                                        curRoom.getPuzzle().getInventory().remove(name);
+                                    }
+                                }
                                 return "Solved";
                             } else {
                                 System.out.println("The answer you have provided is wrong, you still have " + (i - 1) + " left. Try one more time.");
