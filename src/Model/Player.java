@@ -199,12 +199,19 @@ public class Player {
                 return "Hint";
             }
             else return "NoPuzzle";
+        }else if(name.equalsIgnoreCase("Invisibility Cloak")){
+            if(curRoom.getPuzzle() != null){
+                return "Hint";
+            }
+            else return "NoPuzzle";
         }
         else if(name.equalsIgnoreCase("Invisibility Cloak")){
             gameMap.getRoom("F3R6").setLocked(false);
             return "sneak";
         }
-            return "Nothing";
+        return "Nothing";
+
+
     }
 
     public String pickUpItem(String name){
@@ -282,8 +289,7 @@ public class Player {
                         break;
 
                     case "FLEE":
-                        //go to the previous room
-
+                        break;
                     default:
                         System.out.println(ANSI_RED +"You did nothing!! Try again." + ANSI_RESET);
                 }
@@ -311,6 +317,7 @@ public class Player {
         if (!playerWon)
         {
             System.out.println(ANSI_RED + "You were defeated by the " + ANSI_RESET + ANSI_PURPLE + monster.getName() + ANSI_RESET + ANSI_RED +  "!" + ANSI_RESET);
+
         }
 
         return playerWon;
