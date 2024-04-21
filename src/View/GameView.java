@@ -51,6 +51,12 @@ public class GameView {
         System.out.println(ANSI_CYAN + hint.replaceAll("[.?!]\\s?", "$0\n") + ANSI_RESET);
     }
 
+    public void stats(int HP, int CR){
+        System.out.println(ANSI_CYAN + "Current Status:" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "HP: " + HP + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "CR: " + CR + ANSI_RESET);
+    }
+
     public void puzzleResults(String result){
         if(result.equalsIgnoreCase("Solved")){
             System.out.println(ANSI_GREEN + "You did it! You solved the puzzle!" + ANSI_RESET);
@@ -76,7 +82,6 @@ public class GameView {
         }else{
             System.out.println(ANSI_BLUE + "You have succesfully equipped: " + item + ANSI_RESET);
         }
-
     }
 
     public void noItem(){

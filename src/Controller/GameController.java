@@ -232,6 +232,14 @@ public class GameController implements java.io.Serializable {
                     gameView.notInv();
                 }
             }
+            else if(verb.equalsIgnoreCase("Access")) {
+                if(object.equalsIgnoreCase("Status")){
+                    gameView.stats(gameModel.getPlayer().getHP(), gameModel.getPlayer().getCR());
+                }
+                else{
+                    gameView.wrongCommand();
+                }
+            }
             else {
                 gameView.wrongCommand();
             }
