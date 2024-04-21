@@ -144,8 +144,12 @@ public class Player {
     }
 
     public String consume(String name) {
-        if (inventory.get(name) instanceof Consumables) {
+        if (inventory.get(name) instanceof Consumables &&  ((Consumables) inventory.get(name)).getcCount() >= 1 ) {
             HP += ((Consumables) inventory.get(name)).getcAmount();
+            ((Consumables) inventory.get(name)).setcCount(((Consumables) inventory.get(name)).getcCount() - 1);
+            if(((Consumables) inventory.get(name)).getcCount() == 0){
+                inventory.remove(name);
+            }
             return "Heal";
         }else
             return "Nothing";
@@ -189,17 +193,33 @@ public class Player {
     }
 
     public String pickUpItem(String name){
+        if (inventory.get(name) instanceof Consumables){
+            ((Consumables) inventory.get(name)).setcCount(((Consumables) inventory.get(name)).getcCount() + 1);
+        }
         inventory.put(curRoom.getInventory().get(name).getItemName(),curRoom.getInventory().get(name));
         curRoom.getInventory().remove(name);
         return inventory.get(name).getItemName();
     }
 
-    public void dropItem(String name){
-
+    public String dropItem(String name){
+        if (inventory.get(name) instanceof Consumables){
+            ((Consumables) inventory.get(name)).setcCount(((Consumables) inventory.get(name)).getcCount() - 1);
+            curRoom.getInventory().put(getInventory().get(name).getItemName(),inventory.get(name));
+            if(((Consumables) inventory.get(name)).getcCount() == 0 ){
+                getInventory().remove(name);
+            }
+        } else{
+            curRoom.getInventory().put(getInventory().get(name).getItemName(),inventory.get(name));
+            getInventory().remove(name);
+            return curRoom.getInventory().get(name).getItemName();
+        }
+        return curRoom.getInventory().get(name).getItemName();
     }
-    public void examineItem(String name){
 
+    public String examineItem(String name){
+        return inventory.get(name).getItemDescription();
     }
+
     public boolean combatWithMonster(Monster monster)
     {
         System.out.println("You encountered a " + ANSI_PURPLE +  monster.getName() + ANSI_RESET + "!");

@@ -86,15 +86,11 @@ public class GameView {
         }
     }
 
-    public void nothing(String item){
-        if(item.equalsIgnoreCase("Nothing")){
-            System.out.println(ANSI_RED + "Nothing happens." + ANSI_RESET);
-        }
-    }
-
     public void con(String item){
         if(item.equalsIgnoreCase("Heal")){
             System.out.println(ANSI_GREEN + "You healed some HP back." + ANSI_RESET);
+        }else if(item.equalsIgnoreCase("Nothing")){
+            System.out.println(ANSI_RED + "Nothing happens." + ANSI_RESET);
         }
     }
 
@@ -113,6 +109,12 @@ public class GameView {
 
     public void pickUp(String name){
         System.out.println(ANSI_BLUE + "You have successfully picked up " + name + ANSI_RESET);
+    }
+    public void drop(String name){
+        System.out.println(ANSI_BLUE + "You have successfully dropped " + name + ANSI_RESET);
+    }
+    public void examine(String name){
+        System.out.println(ANSI_BLUE + "You examine the item.." + '\n' + name +  ANSI_RESET);
     }
 
     public void notInv(){

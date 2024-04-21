@@ -12,7 +12,7 @@ Consumable~
 10~
 1~
 
-F1R7~
+F1R1~
 Health Potion~
 A small, glass vial containing a vibrant liquid with a faint, soothing glow. The liquid within sparkles with healing energy, promising relief from wounds and ailments.~
 Room~

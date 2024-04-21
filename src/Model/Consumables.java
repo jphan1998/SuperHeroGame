@@ -17,5 +17,11 @@ public class Consumables extends Item {
         return cAmount;
     }
 
+    public int getcCount() {
+        return cCount;
+    }
 
+    public void setcCount(int cCount) {
+        this.cCount = cCount;
+    }
 }

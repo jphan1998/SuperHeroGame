@@ -6,6 +6,7 @@ public class Item {
     private String ItemDescription;
 
 
+
     public Item(String itemName, String itemDescription, String itemType) {
         ItemType = itemType;
         ItemName = itemName;
@@ -19,4 +20,5 @@ public class Item {
     public String getItemDescription() {
         return ItemDescription;
     }
+
 }
