@@ -219,17 +219,15 @@ public class Player {
     public String dropItem(String name){
         if (inventory.get(name) instanceof Consumables){
             if(curRoom.getInventory().containsKey(name)) {
-                ((Consumables) curRoom.getInventory().get(name)).setcCount(((Consumables) curRoom.getInventory().get(name)).getcCount() - 1);
+                ((Consumables) curRoom.getInventory().get(name)).setcCount(((Consumables) curRoom.getInventory().get(name)).getcCount() + 1);
                 if(((Consumables) curRoom.getInventory().get(name)).getcCount() == 0 ){
                     inventory.remove(name);
                 }
-            }
-            else{
+            } else{
                 curRoom.getInventory().put((inventory.get(name).getItemName()), inventory.get(name));
                 inventory.remove(name);
             }
-        }
-        else {
+        } else {
             curRoom.getInventory().put(inventory.get(name).getItemName(), inventory.get(name));
             inventory.remove(name);
         }
