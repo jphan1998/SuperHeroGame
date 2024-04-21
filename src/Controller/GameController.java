@@ -162,6 +162,7 @@ public class GameController implements java.io.Serializable {
             }
             else if (verb.equalsIgnoreCase("Fight")){
                 String monsterName = input.substring(5).trim();
+
                 if (gameModel.getPlayer().getCurRoom().getMonster().getName().equalsIgnoreCase(monsterName))
                 {
                     Monster monster = gameModel.getPlayer().getCurRoom().getMonster();
@@ -174,7 +175,6 @@ public class GameController implements java.io.Serializable {
                     else {
                         gameView.lose();
                         loadGame(); // Game over method
-                        return;
                     }
                 }
 
