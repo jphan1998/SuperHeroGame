@@ -47,11 +47,10 @@ public class Player {
             Scanner in = new Scanner(System.in);
             for (int i = curRoom.getPuzzle().getAttempts(); i > 0; i--) {
                 String input = in.nextLine();
-                if (!curRoom.getPuzzle().getSolution().toLowerCase().contains(input.toLowerCase())) {
+                if (!input.toLowerCase().contains(curRoom.getPuzzle().solution.toLowerCase())) {
                     System.out.println("The answer you have provided is wrong, you still have " + (i - 1) + " left. Try one more time.");
                 } else {
                     curRoom.getPuzzle().setSolved(true);
-                    curRoom.setPuzzle(null);
                     return "Solved";
                 }
             }

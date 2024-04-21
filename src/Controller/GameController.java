@@ -115,6 +115,7 @@ public class GameController {
                         if (!gameModel.getPlayer().getCurRoom().getPuzzle().isSolved()) {
                             gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getPrevRoom().getRoomID()));
                         }
+                        gameModel.getPlayer().getCurRoom().setPuzzle(null);
                     }
                 }
             }
