@@ -130,6 +130,12 @@ public class GameView {
         System.out.println(ANSI_RED + "You do not have that item in your inventory." + ANSI_RESET);
     }
     public void noTorch(){ System.out.println(ANSI_RED + "The puzzles are too hard to decipher in this lighting, maybe you need a light source in your inventory!" + ANSI_RESET);}
+    public void loadGame(){
+        System.out.println(ANSI_CYAN + "The game has loaded successfully!" + ANSI_RESET);
+    }
+    public void saveGame(){
+        System.out.println(ANSI_CYAN + "The game has successfully been saved!" + ANSI_RESET);
+    }
     public void encounterMonster()
     {
         System.out.println(ANSI_PURPLE +"You encountered a " + ANSI_RESET + "!");
