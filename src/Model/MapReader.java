@@ -13,6 +13,7 @@ public class MapReader {
         readMap("Room.txt");
         readMonster("Monster.txt");
         readPuzzle("puzzles.txt");
+        readItems("Items.txt");
     }
 
     public void readMap(String file) throws FileNotFoundException {
@@ -76,35 +77,49 @@ public class MapReader {
         itemReader.useDelimiter("[~\r\n]+"); // Delimiter to separate the text file, removes carriage return, new line, and '~'.
 
         while (itemReader.hasNext()) {
-            int roomId = Integer.parseInt(itemReader.next());
+            String roomId = itemReader.next();
             String itemName = itemReader.next();
             String itemDescription = itemReader.next();
+            String dropLocation = itemReader.next();
             String itemType = itemReader.next();
 
-            // Check if the room already exists in the itemsMap
-            if (!itemsMap.containsKey(roomId)) {
-                itemsMap.put(roomId, new HashMap<>());
+            if(itemType.equalsIgnoreCase("consumable")){
+                int cAmount = itemReader.nextInt();
+                int cCount = itemReader.nextInt();
+                if(dropLocation.equalsIgnoreCase("Room")){
+                    gameMap.get(roomId).getInventory().put(itemName, new Consumables(itemName,itemDescription,itemType, cAmount, cCount));
+                }
+                if(dropLocation.equalsIgnoreCase("Puzzle")){
+                    gameMap.get(roomId).getPuzzle().getInventory().put(itemName, new Consumables(itemName,itemDescription,itemType, cAmount, cCount));
+                }
+                if(dropLocation.equalsIgnoreCase("Monster")){
+                    gameMap.get(roomId).getMonster().getInventory().put(itemName, new Consumables(itemName,itemDescription,itemType, cAmount, cCount));
+                }
             }
-            Item newItem = null;
-            switch (itemType) {
-                case "Consumable":
-                    int cAmount = itemReader.nextInt();
-                    int cCount = itemReader.nextInt();
-                    newItem = new Consumables(roomId, itemName, itemDescription, itemType, cAmount, cCount);
-                    break;
-                case "Equipment":
-                    int eAmount = itemReader.nextInt();
-                    newItem = new Equipment(roomId, itemName, itemDescription, itemType, eAmount);
-                    break;
-                case "Tool":
-                    newItem = new Tools(roomId, itemName, itemDescription, itemType);
-                    break;
-                default:
-                    break;
+            if (itemType.equalsIgnoreCase("equipment")){
+                int eAmount = itemReader.nextInt();
+                if(dropLocation.equalsIgnoreCase("Room")){
+                    gameMap.get(roomId).getInventory().put(itemName, new Equipment(itemName,itemDescription,itemType, eAmount));
+                }
+                if(dropLocation.equalsIgnoreCase("Puzzle")){
+                    gameMap.get(roomId).getPuzzle().getInventory().put(itemName, new Equipment(itemName,itemDescription,itemType, eAmount));
+                }
+                if(dropLocation.equalsIgnoreCase("Monster")){
+                    gameMap.get(roomId).getMonster().getInventory().put(itemName, new Equipment(itemName,itemDescription,itemType, eAmount));
+                }
             }
-            itemsMap.get(roomId).put(itemName, itemDescription);
+            if(itemType.equalsIgnoreCase("item")){
+                if(dropLocation.equalsIgnoreCase("Room")){
+                    gameMap.get(roomId).getInventory().put(itemName, new Item(itemName,itemDescription,itemType));
+                }
+                if(dropLocation.equalsIgnoreCase("Puzzle")){
+                    gameMap.get(roomId).getPuzzle().getInventory().put(itemName, new Item(itemName,itemDescription,itemType));
+                }
+                if(dropLocation.equalsIgnoreCase("Monster")){
+                    gameMap.get(roomId).getMonster().getInventory().put(itemName, new Item(itemName,itemDescription,itemType));
+                }
+            }
         }
-        return itemsMap;
     }
 
     public Room getRoom (String id){

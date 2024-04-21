@@ -76,7 +76,7 @@ F1R6~
 Grapple Hook~
 A sturdy metal hook attached to a length of strong rope, designed for traversing treacherous terrain or scaling towering structures with ease. Its reliable construction and versatility make it a valuable tool for adventurers seeking new heights.~
 Room~
-Tool~
+Item~
 
 F2R5~
 Mirror Shield~
@@ -95,7 +95,7 @@ F1R2~
 Scroll of Knowledge~
 A rolled parchment inscribed with intricate symbols and arcane writings, containing a wealth of information on various subjects.~
 Room~
-Tool~
+Item~
 
 F3R3~
 Enchanted Dagger~

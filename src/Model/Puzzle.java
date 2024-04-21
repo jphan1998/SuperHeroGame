@@ -1,5 +1,8 @@
 package Model;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 public class Puzzle {
     String name;
     String desc;
@@ -8,6 +11,7 @@ public class Puzzle {
     int attempts;
     String unlockRoom;
     boolean solved;
+    private Map<String, Item> inventory;
 
     public Puzzle(String aName, String aDesc, String aHint, String aSolution, int aAttempts, String aUnlock){
         this.name = aName;
@@ -17,6 +21,7 @@ public class Puzzle {
         this.attempts = aAttempts;
         this.unlockRoom = aUnlock;
         solved = false;
+        inventory = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
     }
 
     //Getters and Setters
@@ -75,5 +80,13 @@ public class Puzzle {
 
     public void setSolved(boolean solved) {
         this.solved = solved;
+    }
+
+    public Map<String, Item> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Map<String, Item> inventory) {
+        this.inventory = inventory;
     }
 }

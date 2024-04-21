@@ -1,14 +1,12 @@
 package Model;
 
 public class Item {
-    private int roomID;
     private String ItemType;
     private String ItemName;
     private String ItemDescription;
 
 
-    public Item(int roomID, String itemType, String itemName, String itemDescription) {
-        this.roomID = roomID;
+    public Item(String itemType, String itemName, String itemDescription) {
         ItemType = itemType;
         ItemName = itemName;
         ItemDescription = itemDescription;
