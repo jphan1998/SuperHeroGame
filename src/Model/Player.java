@@ -189,6 +189,12 @@ public class Player {
                 return "Success";
             }
         }
+        else if(name.equalsIgnoreCase("Scroll of Knowledge")){
+            if(curRoom.getPuzzle() != null){
+                return "Hint";
+            }
+            else return "NoPuzzle";
+        }
             return "Nothing";
     }
 

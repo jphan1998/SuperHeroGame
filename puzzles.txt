@@ -1,7 +1,7 @@
 F1R3~
 Riddle of the Sphinx~
 Stand before the statue of the Sphinx, guardian of ancient wisdom and keeper of timeless secrets. Listen closely as it poses a riddle, its eyes gleaming with the light of ages past. Delve into the depths of your mind and unearth the answer, for only those who solve its enigma shall be deemed worthy to tread further upon the path of destiny.~
-The room is adorned with ancient hieroglyphs and a statue of a Sphinx. Engraved on a stone tablet nearby is a riddle posed by the Sphinx. To proceed, the player must solve the riddle and provide the correct answer. Riddle: "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"~
+The room is adorned with ancient hieroglyphs and a statue of a Sphinx. Engraved on a stone tablet nearby is a riddle posed by the Sphinx. To proceed, the player must solve the riddle and provide the correct answer. Riddle: I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?~
 Echo~
 3~
 F1R4~
@@ -48,8 +48,8 @@ Owl~
 F3R7~
 
 F3R8~
-Two Sloth's Challenge~
-There are two sloths guarding two doors, one leads to the treasure of the secret vault, the other leads to death. One Sloth only tells the truth, and the other tells a lie. You ask Sloth A which door would Sloth B pick and his response: "My brother will tell you Door A is the treasure."~
+Two Sloths' Challenge~
+There are two sloths guarding two doors, one leads to the treasure of the secret vault, the other leads to death. One Sloth only tells the truth, and the other tells a lie. You ask Sloth A which door would Sloth B pick and his response: My brother will tell you Door A is the treasure.~
 If Sloth A is the liar, then it must be the other door. If Sloth A is telling the truth, then Sloth B would lie about Door A being safe!
 B~
 1~

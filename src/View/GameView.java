@@ -47,6 +47,9 @@ public class GameView {
         System.out.println(ANSI_BLUE + name + ANSI_RESET);
         System.out.println(ANSI_CYAN + desc.replaceAll("[.?!]\\s?", "$0\n") + ANSI_RESET);
     }
+    public void displayHint(String hint){
+        System.out.println(ANSI_CYAN + hint.replaceAll("[.?!]\\s?", "$0\n") + ANSI_RESET);
+    }
 
     public void puzzleResults(String result){
         if(result.equalsIgnoreCase("Solved")){
@@ -83,6 +86,12 @@ public class GameView {
     public void useItem(String item){
         if(item.equalsIgnoreCase("Success")){
             System.out.println(ANSI_BLUE + "You have gone to the new floor." + ANSI_RESET);
+        }
+        if(item.equalsIgnoreCase("Hint")){
+            System.out.println(ANSI_BLUE + "This might help with the puzzle!" + ANSI_RESET);
+        }
+        if(item.equalsIgnoreCase("NoPuzzle")){
+            System.out.println(ANSI_RED + "There is no puzzle here!" + ANSI_RESET);
         }
     }
 

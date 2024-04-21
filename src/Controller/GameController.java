@@ -218,7 +218,21 @@ public class GameController implements java.io.Serializable {
                 else{
                     gameView.notInv();
                 }
-            } else {
+
+            }else if(verb.equalsIgnoreCase("Use")) {
+                if (gameModel.getPlayer().getInventory().containsKey(object)) {
+                    if((gameModel.getPlayer().use(object).equalsIgnoreCase("hint"))){
+                       gameView.useItem(gameModel.getPlayer().use(object));
+                       gameView.displayHint(gameModel.getPlayer().getCurRoom().getPuzzle().getHint());
+                    }
+                    else{
+                        gameView.useItem(gameModel.getPlayer().use(object));
+                    }
+                } else {
+                    gameView.notInv();
+                }
+            }
+            else {
                 gameView.wrongCommand();
             }
         }
