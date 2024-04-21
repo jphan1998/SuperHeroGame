@@ -186,6 +186,18 @@ public class Player {
             return "Nothing";
     }
 
+    public void pickUpItem(String name){
+        inventory.put(curRoom.getInventory().get(name).getItemName(),curRoom.getInventory().get(name));
+        curRoom.getInventory().remove(name);
+        return
+    }
+
+    public void dropItem(String name){
+
+    }
+    public void examineItem(String name){
+
+    }
 
 
 }
