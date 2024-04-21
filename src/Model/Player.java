@@ -144,7 +144,7 @@ public class Player {
     }
 
     public String consume(String name) {
-        if (inventory.get(name) instanceof Consumables &&  ((Consumables) inventory.get(name)).getcCount() >= 1 ) {
+        if (inventory.get(name) instanceof Consumables) {
             HP += ((Consumables) inventory.get(name)).getcAmount();
             ((Consumables) inventory.get(name)).setcCount(((Consumables) inventory.get(name)).getcCount() - 1);
             if(((Consumables) inventory.get(name)).getcCount() == 0){
@@ -193,12 +193,19 @@ public class Player {
     }
 
     public String pickUpItem(String name){
-        if (inventory.get(name) instanceof Consumables){
-            ((Consumables) inventory.get(name)).setcCount(((Consumables) inventory.get(name)).getcCount() + 1);
+        if (curRoom.getInventory().get(name) instanceof Consumables){
+            if(inventory.containsKey(name)) {
+                ((Consumables) inventory.get(name)).setcCount(((Consumables) inventory.get(name)).getcCount() + 1);
+            }
+            else{
+                inventory.put((curRoom.getInventory().get(name).getItemName()), curRoom.getInventory().get(name));
+            }
         }
-        inventory.put(curRoom.getInventory().get(name).getItemName(),curRoom.getInventory().get(name));
-        curRoom.getInventory().remove(name);
-        return inventory.get(name).getItemName();
+        else {
+            inventory.put(curRoom.getInventory().get(name).getItemName(), curRoom.getInventory().get(name));
+            curRoom.getInventory().remove(name);
+        }
+            return inventory.get(name).getItemName();
     }
 
     public String dropItem(String name){
