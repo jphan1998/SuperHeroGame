@@ -77,7 +77,7 @@ public class GameView {
     }
 
     public void noItem(){
-        System.out.println(ANSI_RED + "You do not have that item in your inventory!" + ANSI_RESET);
+        System.out.println(ANSI_RED + "There is no item with that name!" + ANSI_RESET);
     }
 
     public void useItem(String item){
@@ -106,5 +106,11 @@ public class GameView {
         System.out.println(ANSI_RED + "There is nothing in your inventory!" + ANSI_RESET);
     }
 
+    public void pickUp(String name){
+        System.out.println(ANSI_BLUE + "You have successfully picked up " + name + ANSI_RESET);
+    }
 
+    public void notInv(){
+        System.out.println(ANSI_RED + "You do not have that item in your inventory." + ANSI_RESET);
+    }
 }
