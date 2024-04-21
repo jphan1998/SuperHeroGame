@@ -54,7 +54,9 @@ public class Player {
                         if (getInventory().containsKey(object)) {
                             if (object.toLowerCase().contains(curRoom.getPuzzle().solution.toLowerCase())) {
                                 curRoom.getPuzzle().setSolved(true);
-                                gameMap.getRoom(curRoom.getPuzzle().getUnlockRoom()).setLocked(false);
+                                if(!curRoom.getPuzzle().getUnlockRoom().equalsIgnoreCase("0")) {
+                                    gameMap.getRoom(curRoom.getPuzzle().getUnlockRoom()).setLocked(false);
+                                }
                                 if(!curRoom.getPuzzle().getInventory().isEmpty()){
                                     for(String name : curRoom.getPuzzle().getInventory().keySet()){
                                         curRoom.getInventory().put(name, curRoom.getPuzzle().getInventory().get(name));
@@ -73,7 +75,9 @@ public class Player {
                     System.out.println("The answer you have provided is wrong, you still have " + (i - 1) + " left. Try one more time.");
                 } else {
                     curRoom.getPuzzle().setSolved(true);
-                    gameMap.getRoom(curRoom.getPuzzle().getUnlockRoom()).setLocked(false);
+                        if(!curRoom.getPuzzle().getUnlockRoom().equalsIgnoreCase("0")) {
+                            gameMap.getRoom(curRoom.getPuzzle().getUnlockRoom()).setLocked(false);
+                        }
                     if(!curRoom.getPuzzle().getInventory().isEmpty()){
                         for(String name : curRoom.getPuzzle().getInventory().keySet()){
                             curRoom.getInventory().put(name, curRoom.getPuzzle().getInventory().get(name));
