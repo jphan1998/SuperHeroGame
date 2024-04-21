@@ -82,7 +82,8 @@ F2R5~
 Mirror Shield~
 A gleaming shield adorned with a reflective surface, capable of deflecting both physical and magical attacks. Its mirrored surface can also be used to dazzle foes with blinding flashes of light, providing a strategic advantage in battle.~
 Monster~
-Item~
+Equipment~
+3~
 
 F3R7~
 Invisibility Cloak~
@@ -101,7 +102,7 @@ Enchanted Dagger~
 A finely crafted dagger imbued with mystical enchantments, capable of delivering devastating blows to foes.~
 Room~
 Equipment~
-4~
+3~
 
 F2R8~
 Teleportation Crystal~
