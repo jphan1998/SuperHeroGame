@@ -135,6 +135,14 @@ public class GameController {
                     }
                 }
             }
+            else if(verb.equalsIgnoreCase("Equip")){
+                if(gameModel.getPlayer().getInventory().containsKey(object)){
+                    gameView.equip(gameModel.getPlayer().equip(object));
+                }
+                else{
+                    gameView.noItem();
+                }
+            }
             else {
                 gameView.wrongCommand();
             }
