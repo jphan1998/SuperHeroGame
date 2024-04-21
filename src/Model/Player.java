@@ -131,18 +131,15 @@ public class Player {
         return;
     }
 
-    public void equip(String name){
+    public String equip(String name){
         if(inventory.get(name) instanceof Equipment){
             CR += ((Equipment) inventory.get(name)).geteAmount();
-        }else if(){
+            System.out.println("You have equipped " + name);
+    }
 
+        public String read(){
+            return curRoom.getPuzzle().getHint();
         }
-        return;
-    }
-
-    public String read(){
-        return curRoom.getPuzzle().getHint();
-    }
 
     public void use(){
         if(inventory.containsKey()){
