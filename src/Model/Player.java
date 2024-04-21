@@ -225,7 +225,9 @@ public class Player {
                 }
             } else{
                 curRoom.getInventory().put((inventory.get(name).getItemName()), inventory.get(name));
-                inventory.remove(name);
+                if(((Consumables) curRoom.getInventory().get(name)).getcCount() == 0 ){
+                    inventory.remove(name);
+                }
             }
         } else {
             curRoom.getInventory().put(inventory.get(name).getItemName(), inventory.get(name));
