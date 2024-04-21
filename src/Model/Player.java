@@ -164,13 +164,6 @@ public class Player {
         }
     }
 
-    public String read(String name) {
-        if (inventory.get(name) instanceof Item) {
-            return curRoom.getPuzzle().getHint();
-        }else
-            return "Nothing";
-    }
-
     public String use(String name) {
         if (name.equalsIgnoreCase("Grapple Hook")) {
             if(curRoom.getRoomID().equalsIgnoreCase("F1R6")){
