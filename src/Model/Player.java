@@ -126,9 +126,11 @@ public class Player {
         this.gear = gear;
     }
 
-    public void consume(){
-        setHP(getHP()+5);
-        return;
+    public void consume(String name) {
+        if (inventory.get(name) instanceof Consumables) {
+            HP += ((Consumables) inventory.get(name)).getcAmount();
+            System.out.println("You have consumed " + name);
+        }
     }
 
 
@@ -142,9 +144,12 @@ public class Player {
     }
 
 
-    public String read(){
-        return curRoom.getPuzzle().getHint();
+    public String read(String name) {
+        if (inventory.get(name) instanceof Item) {
+            return curRoom.getPuzzle().getHint();
+        }
     }
+
 
 
     /*public void use(){
@@ -153,7 +158,7 @@ public class Player {
         }else if (inventory.containsKey()){
 
         }
-    }*/
+    }
 
 
 }
