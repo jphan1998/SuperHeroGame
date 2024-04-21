@@ -241,6 +241,14 @@ public class GameController implements java.io.Serializable {
                     gameView.wrongCommand();
                 }
             }
+            else if(verb.equalsIgnoreCase("Exit")){
+                if(object.equalsIgnoreCase("Game")){
+                    System.exit(0);
+                }
+                else{
+                    gameView.wrongCommand();
+                }
+            }
             else {
                 gameView.wrongCommand();
             }
