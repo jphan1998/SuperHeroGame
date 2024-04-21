@@ -77,9 +77,10 @@ public class GameController implements java.io.Serializable {
             }
             else if (verb.equalsIgnoreCase("Save")) {
                 saveGame();
+                gameView.saveGame();
             } else if (verb.equalsIgnoreCase("Load")) {
                 loadGame();
-                gameView.updateView("Game loaded successfully.");
+                gameView.loadGame();
                 // Display the current room after loading the game
                 gameView.updateView("You are now in " + gameModel.getPlayer().getCurRoom().getName() + "\n" + gameModel.getPlayer().getCurRoom().getDescription());
             }
