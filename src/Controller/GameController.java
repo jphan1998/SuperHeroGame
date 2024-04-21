@@ -72,41 +72,51 @@ public class GameController {
             object = command[1];
             if(verb.equalsIgnoreCase("Move")){
                 if(object.equalsIgnoreCase("North")){
-                    if(!gameModel.getPlayer().getCurRoom().getN().equalsIgnoreCase("O")) {
+                    if(gameModel.getPlayer().getGameMap().getGameMap().containsKey(gameModel.getPlayer().getCurRoom().getN())) {
                         if (gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getN()).getIsLocked()) {
                             gameView.lockedRoom();
                         } else {
                             gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getN()));
                         }
                     }
+                    else{
+                        gameView.updateView("No room");
+                    }
                 }
                 else if(object.equalsIgnoreCase("East")){
-                    if(!gameModel.getPlayer().getCurRoom().getE().equalsIgnoreCase("O")) {
+                    if(gameModel.getPlayer().getGameMap().getGameMap().containsKey(gameModel.getPlayer().getCurRoom().getE())) {
                         if (gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getE()).getIsLocked()) {
                             gameView.lockedRoom();
                         } else {
                             gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getE()));
                         }
                     }
-                    else()
+                    else{
+                        gameView.updateView("No room");
+                    }
                 }
                 else if(object.equalsIgnoreCase("South")){
-                    if(!gameModel.getPlayer().getCurRoom().getS().equalsIgnoreCase("O")){
-                    if(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getS()).getIsLocked()){
-                        gameView.lockedRoom();
+                    if(gameModel.getPlayer().getGameMap().getGameMap().containsKey(gameModel.getPlayer().getCurRoom().getS())) {
+                        if (gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getS()).getIsLocked()) {
+                            gameView.lockedRoom();
+                        } else {
+                            gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getS()));
+                        }
                     }
-                    else {
-                        gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getS()));
-                    }
+                    else{
+                        gameView.updateView("No room");
                     }
                 }
                 else if(object.equalsIgnoreCase("West")){
-                    if(!gameModel.getPlayer().getCurRoom().getW().equalsIgnoreCase("O")) {
+                    if(gameModel.getPlayer().getGameMap().getGameMap().containsKey(gameModel.getPlayer().getCurRoom().getW())) {
                         if (gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getW()).getIsLocked()) {
                             gameView.lockedRoom();
                         } else {
                             gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getCurRoom().getW()));
                         }
+                    }
+                    else{
+                        gameView.updateView("No room");
                     }
                 }
             }

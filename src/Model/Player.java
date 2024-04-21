@@ -132,25 +132,25 @@ public class Player {
     }
 
     public void equip(String name){
-        if(inventory.get(name) instanceof Equipment){
+        /*if(inventory.get(name) instanceof Equipment){
             CR += ((Equipment) inventory.get(name)).geteAmount();
         }else if(){
 
         }
-        return;
+        return;*/
     }
 
     public String read(){
         return curRoom.getPuzzle().getHint();
     }
 
-    public void use(){
+    /*public void use(){
         if(inventory.containsKey()){
 
         }else if (inventory.containsKey()){
 
         }
-    }
+    }*/
 
 
 }
