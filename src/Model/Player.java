@@ -186,10 +186,10 @@ public class Player {
             return "Nothing";
     }
 
-    public void pickUpItem(String name){
+    public String pickUpItem(String name){
         inventory.put(curRoom.getInventory().get(name).getItemName(),curRoom.getInventory().get(name));
         curRoom.getInventory().remove(name);
-        return
+        return name;
     }
 
     public void dropItem(String name){

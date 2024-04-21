@@ -168,7 +168,7 @@ public class GameController implements java.io.Serializable {
                 }
             } else if (verb.equalsIgnoreCase("Pickup")) {
                 if(gameModel.getPlayer().getCurRoom().getInventory().containsKey(object)){
-                    gameView.pickUp(gameModel.getPlayer().getInventory().get(object).getItemName());
+                    gameView.pickUp(gameModel.getPlayer().pickUpItem(object));
                 }
                 else{
                     gameView.noItem();
