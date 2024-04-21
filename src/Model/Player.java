@@ -49,13 +49,12 @@ public class Player {
                 String[] command = input.split(" ", 2);
                 String verb = command[0];
 
-                if(command.length == 2) {
-                    String object = command[1];
-
                     if (verb.equalsIgnoreCase("Use")) {
+                        String object = command[1];
                         if (getInventory().containsKey(object)) {
                             if (object.toLowerCase().contains(curRoom.getPuzzle().solution.toLowerCase())) {
                                 curRoom.getPuzzle().setSolved(true);
+                                gameMap.getRoom(curRoom.getPuzzle().getUnlockRoom()).setLocked(false);
                                 return "Solved";
                             } else {
                                 System.out.println("The answer you have provided is wrong, you still have " + (i - 1) + " left. Try one more time.");
@@ -64,11 +63,11 @@ public class Player {
                             return "NoItem";
                         }
                     }
-                }
                 else if(!input.toLowerCase().contains(curRoom.getPuzzle().solution.toLowerCase())) {
                     System.out.println("The answer you have provided is wrong, you still have " + (i - 1) + " left. Try one more time.");
                 } else {
                     curRoom.getPuzzle().setSolved(true);
+                    gameMap.getRoom(curRoom.getPuzzle().getUnlockRoom()).setLocked(false);
                     return "Solved";
                 }
             }
