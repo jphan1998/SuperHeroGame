@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class MapReader {
+public class MapReader implements java.io.Serializable {
 
     private HashMap<String, Room> gameMap;
 
@@ -124,35 +124,6 @@ public class MapReader {
 
     public Room getRoom (String id){
         return gameMap.get(id);
-    }
-
-    public void saveGame(String filename) {
-
-        {
-            try {
-                FileOutputStream fileOutputStream = new FileOutputStream(filename);
-                ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-                objectOutputStream.writeObject(gameMap);
-                objectOutputStream.close();
-                fileOutputStream.close();
-                System.out.println("Game saved successfully!");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void loadGame(String filename) {
-        try {
-            FileInputStream fileInputStream = new FileInputStream(filename);
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            gameMap = (HashMap<String, Room>) objectInputStream.readObject();
-            objectInputStream.close();
-            fileInputStream.close();
-            System.out.println("Game loaded successfully!");
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 
     //Getters and Setters
