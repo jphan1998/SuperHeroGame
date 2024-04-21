@@ -120,6 +120,7 @@ public class GameView {
     public void notInv(){
         System.out.println(ANSI_RED + "You do not have that item in your inventory." + ANSI_RESET);
     }
+    public void noTorch(){ System.out.println(ANSI_RED + "The puzzles are too hard to decipher in this lighting, maybe you need a light source in your inventory!" + ANSI_RESET);}
     public void encounterMonster()
     {
         System.out.println(ANSI_PURPLE +"You encountered a " + ANSI_RESET + "!");

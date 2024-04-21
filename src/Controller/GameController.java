@@ -145,12 +145,17 @@ public class GameController implements java.io.Serializable {
                         gameView.noPuzzle();
                     }
                     else {
-                        gameView.displayPuzzle(gameModel.getPlayer().getCurRoom().getPuzzle().getName(), gameModel.getPlayer().getCurRoom().getPuzzle().getDesc());
-                        gameView.puzzleResults(gameModel.getPlayer().solvePuzzle());
-                        if (!gameModel.getPlayer().getCurRoom().getPuzzle().isSolved()) {
-                            gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getPrevRoom().getRoomID()));
+                        if (gameModel.getPlayer().getInventory().containsKey("Torch")) {
+                            gameView.displayPuzzle(gameModel.getPlayer().getCurRoom().getPuzzle().getName(), gameModel.getPlayer().getCurRoom().getPuzzle().getDesc());
+                            gameView.puzzleResults(gameModel.getPlayer().solvePuzzle());
+                            if (!gameModel.getPlayer().getCurRoom().getPuzzle().isSolved()) {
+                                gameView.updateView(gameModel.getPlayer().move(gameModel.getPlayer().getPrevRoom().getRoomID()));
+                            }
+                            gameModel.getPlayer().getCurRoom().setPuzzle(null);
                         }
-                        gameModel.getPlayer().getCurRoom().setPuzzle(null);
+                        else{
+                            gameView.noTorch();
+                        }
                     }
                 }
             }
