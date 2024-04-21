@@ -57,6 +57,9 @@ public class GameView {
         if(result.equalsIgnoreCase("Failed")){
             System.out.println(ANSI_RED + "You have failed the puzzle, please try it again later." + ANSI_RESET);
         }
+        if(result.equalsIgnoreCase("NoItem")){
+            System.out.println(ANSI_RED + "You do not have this item in your inventory! Please retrieve it before you can use it here." + ANSI_RESET);
+        }
     }
 
     public void noPuzzle(){
