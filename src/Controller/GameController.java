@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.GameModel;
+import Model.Monster;
 import View.GameView;
 import java.io.*;
 
@@ -151,6 +152,30 @@ public class GameController implements java.io.Serializable {
                         }
                         gameModel.getPlayer().getCurRoom().setPuzzle(null);
                     }
+                }
+            }
+            else if (verb.equalsIgnoreCase("Fight ")){
+                String monsterName = input.substring(6).trim();
+
+                if (gameModel.getPlayer().getCurRoom().getMonster().getName().equalsIgnoreCase(monsterName))
+                {
+                    Monster monster = gameModel.getPlayer().getCurRoom().getMonster();
+                    gameView.encounterMonster();
+                    boolean playerWon = gameModel.getPlayer().combatWithMonster(monster);
+                    if (playerWon) {
+                        gameModel.getPlayer().getCurRoom().removeMonster();
+                        gameView.win();
+                    }
+                    else {
+                        gameView.lose();
+                        loadGame(); // Game over method
+                        return;
+                    }
+                }
+
+                else
+                {
+                    gameView.noMonster();
                 }
             }
             else if(verb.equalsIgnoreCase("Equip")){

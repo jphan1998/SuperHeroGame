@@ -167,5 +167,8 @@ public class Room
         public void setMonster(Monster monster) {
             this.monster = monster;
         }
+        public void removeMonster() {
+            this.monster = null;
+        }
     }
 

@@ -2,12 +2,10 @@ package View;
 
 public class GameView {
     public static final String ANSI_RED = "\u001B[31m";
-
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_CYAN = "\u001B[36m";
-
+    public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_GREEN = "\u001B[32m";
-
     public static final String ANSI_RESET = "\u001B[0m";
     String view;
 
@@ -118,4 +116,22 @@ public class GameView {
     public void notInv(){
         System.out.println(ANSI_RED + "You do not have that item in your inventory." + ANSI_RESET);
     }
+    public void encounterMonster()
+    {
+        System.out.println(ANSI_PURPLE +"You encountered a " + ANSI_RESET + "!");
+    }
+    public void win()
+    {
+        System.out.println(ANSI_RED + "You defeated the monster!" + ANSI_RESET);
+    }
+
+    public void lose()
+    {
+        System.out.println(ANSI_RED + "You were defeated by the monster!" + ANSI_RESET);
+    }
+    public void noMonster()
+    {
+        System.out.println(ANSI_RED + "No monster in this room!" + ANSI_RESET);
+    }
+
 }
