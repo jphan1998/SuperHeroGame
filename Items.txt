@@ -97,7 +97,7 @@ A rolled parchment inscribed with intricate symbols and arcane writings, contain
 Room~
 Item~
 
-F3R3~
+F1R1~
 Enchanted Dagger~
 A finely crafted dagger imbued with mystical enchantments, capable of delivering devastating blows to foes.~
 Room~
