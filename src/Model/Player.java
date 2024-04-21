@@ -289,7 +289,8 @@ public class Player {
                         break;
 
                     case "FLEE":
-                        break;
+                        //go to the previous room
+
                     default:
                         System.out.println(ANSI_RED +"You did nothing!! Try again." + ANSI_RESET);
                 }
