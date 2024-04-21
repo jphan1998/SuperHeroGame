@@ -149,16 +149,14 @@ public class Player {
             return "Nothing";
     }
 
-
     public String equip(String name) {
         if (inventory.get(name) instanceof Equipment) {
             CR += ((Equipment) inventory.get(name)).geteAmount();
-            return name;
+            return "Equip";
         } else {
             return "Wrong";
         }
     }
-
 
     public String read(String name) {
         if (inventory.get(name) instanceof Item) {
@@ -166,7 +164,6 @@ public class Player {
         }else
             return "Nothing";
     }
-
 
     public String use(String name) {
         if (name.equalsIgnoreCase("Grapple Hook")) {
