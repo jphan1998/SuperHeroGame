@@ -80,5 +80,23 @@ public class GameView {
         System.out.println(ANSI_RED + "You do not have that item in your inventory!" + ANSI_RESET);
     }
 
+    public void useItem(String item){
+        if(item.equalsIgnoreCase("Success")){
+            System.out.println(ANSI_BLUE + "You have gone to the new floor." + ANSI_RESET);
+        }
+    }
+
+    public void nothing(String item){
+        if(item.equalsIgnoreCase("Nothing")){
+            System.out.println(ANSI_RED + "Nothing happens." + ANSI_RESET);
+        }
+    }
+
+    public void con(String item){
+        if(item.equalsIgnoreCase("Heal")){
+            System.out.println(ANSI_GREEN + "You healed some HP back." + ANSI_RESET);
+        }
+    }
+
 
 }

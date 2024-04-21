@@ -14,7 +14,7 @@ public class Player {
     private Map<String, Item> inventory;
     private Map<String, Item> gear;
 
-    public Player(String aName, MapReader aGameMap){
+    public Player(String aName, MapReader aGameMap) {
         HP = 15;
         CR = 2;
         this.name = aName;
@@ -24,19 +24,15 @@ public class Player {
         gear = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
     }
 
-    public String move(String roomId)
-    {
+    public String move(String roomId) {
         String room;
-        if (gameMap.getGameMap().containsKey(roomId))
-        {
+        if (gameMap.getGameMap().containsKey(roomId)) {
             curRoom.setVisited(true);
             prevRoom = curRoom;
             this.curRoom = gameMap.getRoom(roomId);
             room = "You are now in " + curRoom.getName() + "\n" + curRoom.getDescription();
             return room;
-        }
-        else
-        {
+        } else {
             return "No room";
         }
     }
@@ -145,9 +141,12 @@ public class Player {
         this.gear = gear;
     }
 
-    public void consume(){
-        setHP(getHP()+5);
-        return;
+    public String consume(String name) {
+        if (inventory.get(name) instanceof Consumables) {
+            HP += ((Consumables) inventory.get(name)).getcAmount();
+            return "Heal";
+        }else
+            return "Nothing";
     }
 
 
@@ -161,18 +160,35 @@ public class Player {
     }
 
 
-    public String read(){
-        return curRoom.getPuzzle().getHint();
+    public String read(String name) {
+        if (inventory.get(name) instanceof Item) {
+            return curRoom.getPuzzle().getHint();
+        }else
+            return "Nothing";
     }
 
 
-    /*public void use(){
-        if(inventory.containsKey()){
-
-        }else if (inventory.containsKey()){
-
+    public String use(String name) {
+        if (name.equalsIgnoreCase("Grapple Hook")) {
+            if(curRoom.getRoomID().equalsIgnoreCase("F1R6")){
+                move("F2R1");
+                return "Success";
+            }else if(curRoom.getRoomID().equalsIgnoreCase("F2R1")){
+                move("F1R6");
+                return "Success";
+            }
+        }else if(name.equalsIgnoreCase("Teleport Crystal")){
+            if(curRoom.getRoomID().equalsIgnoreCase("F2R8")){
+                move("F3R1");
+                return "Success";
+            }else if(curRoom.getRoomID().equalsIgnoreCase("F3R1")){
+                move("F2R8");
+                return "Success";
+            }
         }
-    }*/
+            return "Nothing";
+    }
+
 
 
 }
