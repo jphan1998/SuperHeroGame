@@ -57,7 +57,7 @@ public class Player {
                                 gameMap.getRoom(curRoom.getPuzzle().getUnlockRoom()).setLocked(false);
                                 if(!curRoom.getPuzzle().getInventory().isEmpty()){
                                     for(String name : curRoom.getPuzzle().getInventory().keySet()){
-                                        curRoom.getInventory().put(name, curRoom.getInventory().get(name));
+                                        curRoom.getInventory().put(name, curRoom.getPuzzle().getInventory().get(name));
                                         curRoom.getPuzzle().getInventory().remove(name);
                                     }
                                 }
@@ -76,7 +76,7 @@ public class Player {
                     gameMap.getRoom(curRoom.getPuzzle().getUnlockRoom()).setLocked(false);
                     if(!curRoom.getPuzzle().getInventory().isEmpty()){
                         for(String name : curRoom.getPuzzle().getInventory().keySet()){
-                            curRoom.getInventory().put(name, curRoom.getInventory().get(name));
+                            curRoom.getInventory().put(name, curRoom.getPuzzle().getInventory().get(name));
                             curRoom.getPuzzle().getInventory().remove(name);
                         }
                     }
