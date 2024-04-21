@@ -222,8 +222,6 @@ public class Player {
                 ((Consumables) curRoom.getInventory().get(name)).setcCount(((Consumables) curRoom.getInventory().get(name)).getcCount() - 1);
                 if(((Consumables) curRoom.getInventory().get(name)).getcCount() == 0 ){
                     inventory.remove(name);
-                }else{
-
                 }
             }
             else{
