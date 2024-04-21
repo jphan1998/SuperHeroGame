@@ -2,13 +2,15 @@ package Model;
 
 import java.io.FileNotFoundException;
 
-public class GameModel {
+public class GameModel implements java.io.Serializable {
     private Player player;
     private MapReader gameMap = new MapReader();
 
     public GameModel() throws FileNotFoundException {
         player = new Player("Player", gameMap);
     }
+
+
 
     public Player getPlayer() {
         return player;
