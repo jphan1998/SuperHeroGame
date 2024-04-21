@@ -132,16 +132,24 @@ public class Player {
     }
 
     public void equip(){
-        setCR(getCR()+3);
+        if(inventory.containsKey("Enchanted Dagger"){
+            setCR(getCR()+5);
+        }else if(){
+
+        }
         return;
     }
 
     public String read(){
-
+        return curRoom.getPuzzle().getHint();
     }
 
     public void use(){
+        if(inventory.containsKey()){
 
+        }else if (inventory.containsKey()){
+
+        }
     }
 
 
