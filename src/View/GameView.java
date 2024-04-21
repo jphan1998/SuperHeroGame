@@ -98,8 +98,13 @@ public class GameView {
         }
     }
 
+    public void invHead(){
+        System.out.println(ANSI_CYAN + "Inventory" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "--------------------------------------------" + ANSI_RESET);
+    }
+
     public void viewInv(String item){
-        System.out.println(item);
+        System.out.println(ANSI_BLUE + item + ANSI_RESET);
     }
 
     public void emptyInv(){

@@ -59,6 +59,7 @@ public class GameController implements java.io.Serializable {
                     gameView.emptyInv();
                 }
                 else{
+                    gameView.invHead();
                     for(String name : gameModel.getPlayer().getInventory().keySet()){
                         gameView.viewInv(name);
                     }
