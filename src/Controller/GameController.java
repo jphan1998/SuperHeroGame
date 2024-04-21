@@ -1,3 +1,9 @@
+/* Class created by Jimmy
+ * Most Command Methods Created by Jimmy with Collaboration with Kevin
+ * Gameplay and GameStart Method by Jimmy
+ * Fight Command Created by Ash
+ * Save and Load Methods created by Woody
+ */
 package Controller;
 
 import Model.GameModel;

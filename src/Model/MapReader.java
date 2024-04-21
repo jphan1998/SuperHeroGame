@@ -1,3 +1,7 @@
+/* Class created by Jimmy
+ * All Methods created by Jimmy
+ */
+
 package Model;
 
 import java.io.*;
@@ -8,6 +12,7 @@ public class MapReader implements java.io.Serializable {
 
     private HashMap<String, Room> gameMap;
 
+    // MapReader Object was created by Jimmy and all Methods inside.
     public MapReader() throws FileNotFoundException {
         gameMap = new HashMap<>();
         readMap("Room.txt");

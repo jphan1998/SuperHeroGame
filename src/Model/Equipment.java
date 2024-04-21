@@ -1,3 +1,6 @@
+/* Class created by Kevin
+ * All Methods created by Kevin
+ */
 package Model;
 
 import Model.Item;

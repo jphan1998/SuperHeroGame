@@ -1,3 +1,8 @@
+/* Class created by Jimmy
+ * Most Methods Created by Jimmy
+ * Item View Methods (Use,Consume,Equip) created by Kevin
+ * EncounterMonster, Win, Lose, NoMonster created by Ash
+ */
 package View;
 
 public class GameView {

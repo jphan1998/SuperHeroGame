@@ -1,3 +1,7 @@
+/* Class created by Jimmy
+ * All Methods created by Jimmy
+ */
+
 package Model;
 
 import java.io.FileNotFoundException;

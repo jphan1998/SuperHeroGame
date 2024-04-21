@@ -1,3 +1,8 @@
+/* Class created by Jimmy
+ * Move & SolvePuzzle Method by Jimmy
+ * Use, Consume, Equip, Drop, Pickup, and all Item Methods by Kevin
+ * CombatWithMonster Method by Ash
+ */
 package Model;
 
 import java.util.Map;

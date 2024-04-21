@@ -1,3 +1,6 @@
+/* Class created by Jimmy
+ * All Methods created by Jimmy
+ */
 import Controller.GameController;
 import Model.GameModel;
 import View.GameView;

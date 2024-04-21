@@ -1,3 +1,8 @@
+/* Class created by Kevin
+ * All Methods created by Kevin
+ * Item Text File made by Kevin
+ */
+
 package Model;
 
 public class Item {

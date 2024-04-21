@@ -1,3 +1,7 @@
+/* Class created by Jared
+ * All Methods created by Jared
+ * Room Text File created by Jared
+ */
 package Model;
 
 import java.util.Map;

@@ -1,3 +1,7 @@
+/* Class created by Jimmy
+ * All Methods created by Jimmy
+ * Text File done by Woody
+ */
 package Model;
 
 import java.util.Map;
