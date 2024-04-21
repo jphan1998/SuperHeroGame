@@ -227,8 +227,7 @@ public class GameController implements java.io.Serializable {
                         gameView.displayHint(gameModel.getPlayer().getCurRoom().getPuzzle().getHint());
                     } else {
                         gameView.useItem(gameModel.getPlayer().use(object));
-                        String room = "You are now in " + gameModel.getPlayer().getCurRoom().getName() + "\n" + gameModel.getPlayer().getCurRoom().getDescription();
-                        gameView.updateView(room);
+                        gameView.updateView(gameModel.getPlayer().use(object));
                     }
                 } else {
                     gameView.notInv();

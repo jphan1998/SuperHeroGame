@@ -32,7 +32,7 @@ public class Player {
         if (gameMap.getGameMap().containsKey(roomId)) {
             curRoom.setVisited(true);
             prevRoom = curRoom;
-            this.curRoom = gameMap.getRoom(roomId);
+            curRoom = gameMap.getRoom(roomId);
             room = "You are now in " + curRoom.getName() + "\n" + curRoom.getDescription();
             return room;
         } else {
@@ -183,19 +183,15 @@ public class Player {
     public String use(String name) {
         if (name.equalsIgnoreCase("Grapple Hook")) {
             if(curRoom.getRoomID().equalsIgnoreCase("F1R6")){
-                move("F2R1");
-                return "Success";
+                return move("F2R1");
             }else if(curRoom.getRoomID().equalsIgnoreCase("F2R1")){
-                move("F1R6");
-                return "Success";
+                return move("F1R6");
             }
         }else if(name.equalsIgnoreCase("Teleport Crystal")){
             if(curRoom.getRoomID().equalsIgnoreCase("F2R8")){
-                move("F3R1");
-                return "Success";
+                return move("F3R1");
             }else if(curRoom.getRoomID().equalsIgnoreCase("F3R1")){
-                move("F2R8");
-                return "Success";
+                return move("F2R8");
             }
         }
         else if(name.equalsIgnoreCase("Scroll of Knowledge")){
