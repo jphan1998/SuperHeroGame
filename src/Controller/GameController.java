@@ -152,8 +152,27 @@ public class GameController implements java.io.Serializable {
                 else{
                     gameView.noItem();
                 }
-            }
-            else {
+            }else if(verb.equalsIgnoreCase("Heal")){
+                if(gameModel.getPlayer().getInventory().containsKey(object)){
+                    gameView.con(gameModel.getPlayer().consume(object));
+                }
+                else{
+                    gameView.noItem();
+                }
+            }else if(verb.equalsIgnoreCase("Nothing")) {
+                if (gameModel.getPlayer().getInventory().containsKey(object)) {
+                    gameView.nothing(gameModel.getPlayer().read(object));
+                } else {
+                    gameView.noItem();
+                }
+
+            }else if(verb.equalsIgnoreCase("Success")) {
+                if (gameModel.getPlayer().getInventory().containsKey(object)) {
+                    gameView.useItem(gameModel.getPlayer().use(object));
+                } else {
+                    gameView.noItem();
+                }
+            }else {
                 gameView.wrongCommand();
             }
         }
