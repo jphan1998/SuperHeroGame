@@ -202,9 +202,11 @@ public class Player {
         if (curRoom.getInventory().get(name) instanceof Consumables){
             if(inventory.containsKey(name)) {
                 ((Consumables) inventory.get(name)).setcCount(((Consumables) inventory.get(name)).getcCount() + 1);
+                curRoom.getInventory().remove(name);
             }
             else{
                 inventory.put((curRoom.getInventory().get(name).getItemName()), curRoom.getInventory().get(name));
+                curRoom.getInventory().remove(name);
             }
         }
         else {
@@ -216,17 +218,20 @@ public class Player {
 
     public String dropItem(String name){
         if (inventory.get(name) instanceof Consumables){
-            ((Consumables) inventory.get(name)).setcCount(((Consumables) inventory.get(name)).getcCount() - 1);
-            curRoom.getInventory().put(getInventory().get(name).getItemName(),inventory.get(name));
-            if(((Consumables) inventory.get(name)).getcCount() == 0 ){
-                getInventory().remove(name);
+            if(curRoom.getInventory().containsKey(name)) {
+                ((Consumables) curRoom.getInventory().get(name)).setcCount(((Consumables) curRoom.getInventory().get(name)).getcCount() - 1);
+                inventory.remove(name);
             }
-        } else{
-            curRoom.getInventory().put(getInventory().get(name).getItemName(),inventory.get(name));
-            getInventory().remove(name);
-            return curRoom.getInventory().get(name).getItemName();
+            else{
+                curRoom.getInventory().put((inventory.get(name).getItemName()), inventory.get(name));
+                inventory.remove(name);
+            }
         }
-        return curRoom.getInventory().get(name).getItemName();
+        else {
+            curRoom.getInventory().put(inventory.get(name).getItemName(), inventory.get(name));
+            inventory.remove(name);
+        }
+        return inventory.get(name).getItemName();
     }
 
     public String examineItem(String name){
