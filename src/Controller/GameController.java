@@ -2,10 +2,11 @@ package Controller;
 
 import Model.GameModel;
 import View.GameView;
+import java.io.*;
 
 import java.util.Scanner;
 
-public class GameController {
+public class GameController implements java.io.Serializable {
     GameView gameView;
     GameModel gameModel;
     Scanner in;
@@ -19,6 +20,7 @@ public class GameController {
             gamePlay();
         }
     }
+
 
     public GameView getGameView() {
         return gameView;
@@ -63,6 +65,14 @@ public class GameController {
             }
             else if(verb.equalsIgnoreCase("Locked")){
                 gameView.isLocked(gameModel.getPlayer().getGameMap().getRoom(gameModel.getPlayer().getCurRoom().getRoomID()).getIsLocked());
+            }
+            else if (verb.equalsIgnoreCase("Save")) {
+                saveGame();
+            } else if (verb.equalsIgnoreCase("Load")) {
+                loadGame();
+                gameView.updateView("Game loaded successfully.");
+                // Display the current room after loading the game
+                gameView.updateView("You are now in " + gameModel.getPlayer().getCurRoom().getName() + "\n" + gameModel.getPlayer().getCurRoom().getDescription());
             }
             else{
                 gameView.wrongCommand();
@@ -146,6 +156,32 @@ public class GameController {
             else {
                 gameView.wrongCommand();
             }
+        }
+    }
+
+    public void saveGame() {
+        try {
+            FileOutputStream fileOut = new FileOutputStream("gameState.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(gameModel);
+            out.close();
+            fileOut.close();
+            System.out.println("Game saved successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void loadGame() {
+        try {
+            FileInputStream fileIn = new FileInputStream("gameState.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            gameModel = (GameModel) in.readObject();
+            in.close();
+            fileIn.close();
+            System.out.println("Game loaded successfully.");
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }
