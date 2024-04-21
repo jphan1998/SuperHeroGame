@@ -51,6 +51,7 @@ public class Player {
                     System.out.println("The answer you have provided is wrong, you still have " + (i - 1) + " left. Try one more time.");
                 } else {
                     curRoom.getPuzzle().setSolved(true);
+                    gameMap.getRoom(curRoom.getPuzzle().getUnlockRoom()).setLocked(false);
                     return "Solved";
                 }
             }
@@ -132,12 +133,12 @@ public class Player {
     }
 
     public void equip(){
-        if(inventory.containsKey("Enchanted Dagger"){
+        /*if(inventory.containsKey("Enchanted Dagger"){
             setCR(getCR()+5);
         }else if(){
 
         }
-        return;
+        return;*/
     }
 
     public String read(){
@@ -145,11 +146,11 @@ public class Player {
     }
 
     public void use(){
-        if(inventory.containsKey()){
+        /*if(inventory.containsKey()){
 
         }else if (inventory.containsKey()){
 
-        }
+        }*/
     }
 
 

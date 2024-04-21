@@ -65,4 +65,10 @@ public class GameView {
     public void isLocked(boolean locked){
         System.out.println("It is " + locked);
     }
+
+    public void hopScotch(){
+        System.out.println("Hi");
+    }
+
+
 }
