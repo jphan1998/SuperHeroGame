@@ -108,4 +108,4 @@ F2R8~
 Teleportation Crystal~
 A crystalline orb pulsating with magical energy, allowing its possessor to instantly teleport to a predetermined location upon activation. Its shimmering surface holds the promise of swift travel across vast distances.~
 Puzzle~
-Tool~
+Item~
