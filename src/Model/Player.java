@@ -231,7 +231,7 @@ public class Player {
             curRoom.getInventory().put(inventory.get(name).getItemName(), inventory.get(name));
             inventory.remove(name);
         }
-        return inventory.get(name).getItemName();
+        return curRoom.getInventory().get(name).getItemName();
     }
 
     public String examineItem(String name){
