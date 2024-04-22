@@ -170,9 +170,8 @@ public class GameController implements java.io.Serializable {
             else if (verb.equalsIgnoreCase("Fight")){
                 String monsterName = input.substring(5).trim();
                 if (gameModel.getPlayer().getCurRoom().getMonster()!=null&&gameModel.getPlayer().getCurRoom().getMonster().getName().equalsIgnoreCase(monsterName)) {
-                    Monster monster = gameModel.getPlayer().getCurRoom().getMonster();
                     gameView.encounterMonster();
-                    boolean playerWon = gameModel.getPlayer().combatWithMonster(monster);
+                    boolean playerWon = gameModel.getPlayer().combatWithMonster(gameModel.getPlayer().getCurRoom().getMonster());
                     if (playerWon) {
                         if(gameModel.getPlayer().getCurRoom().getMonster().getInventory().containsKey(object)){
                             gameModel.getPlayer().getCurRoom().getInventory().put(gameModel.getPlayer().getCurRoom().getMonster().getInventory().get(object).getItemName(),gameModel.getPlayer().getCurRoom().getMonster().getInventory().get(object));
@@ -298,6 +297,7 @@ public class GameController implements java.io.Serializable {
                 loadGame();
                 break;
             case "EXIT":
+                gameView.goodBye();
                 System.exit(0);
                 break;
         }

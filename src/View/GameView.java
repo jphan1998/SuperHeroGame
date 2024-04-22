@@ -172,5 +172,7 @@ public class GameView {
     public void selectionDefeat(){
         System.out.println("Load: Load Game to a previously saved point.\nExit: Quit Game.");
     }
-
+    public void goodBye(){
+        System.out.println(ANSI_CYAN + "Goodbye!\nThank" + ANSI_RESET);
+    }
 }
