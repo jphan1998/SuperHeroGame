@@ -5,6 +5,7 @@
 package Model;
 
 import java.io.FileNotFoundException;
+import java.io.*;
 
 public class GameModel implements java.io.Serializable {
     private Player player;
