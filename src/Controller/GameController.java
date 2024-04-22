@@ -7,8 +7,6 @@
 package Controller;
 
 import Model.GameModel;
-import Model.Item;
-import Model.Monster;
 import View.GameView;
 import java.io.*;
 
