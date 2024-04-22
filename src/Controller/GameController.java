@@ -179,7 +179,11 @@ public class GameController implements java.io.Serializable {
                         gameView.win();
                     }
                     else {
-                        gameView.lose();
+                        if(gameModel.getPlayer().getHP()>0){
+                            gameView.flee();
+                        }
+                        else
+                            loadQuit();
                     }
                 }
 
@@ -284,6 +288,19 @@ public class GameController implements java.io.Serializable {
             System.out.println("Game loaded successfully.");
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
+        }
+    }
+    public void loadQuit(){
+        gameView.selectionDefeat();
+        Scanner scanner = new Scanner(System.in);
+        String action = scanner.nextLine().toUpperCase();
+        switch (action){
+            case "LOAD":
+                loadGame();
+                break;
+            case "EXIT":
+                System.exit(0);
+                break;
         }
     }
 }

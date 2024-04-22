@@ -161,13 +161,16 @@ public class GameView {
         System.out.println(ANSI_RED + "You won and the monster has gone!" + ANSI_RESET);
     }
 
-    public void lose()
+    public void flee()
     {
         System.out.println(ANSI_RED + "You can come back to the room and fight again!" + ANSI_RESET);
     }
     public void noMonster()
     {
         System.out.println(ANSI_RED + "No monster in this room!" + ANSI_RESET);
+    }
+    public void selectionDefeat(){
+        System.out.println("Load: Load Game to a previously saved point.\nExit: Quit Game.");
     }
 
 }
