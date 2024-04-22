@@ -163,7 +163,7 @@ public class GameView {
 
     public void flee()
     {
-        System.out.println(ANSI_RED + "You can come back to the room and fight again!" + ANSI_RESET);
+        System.out.println(ANSI_RED + "You can go back to the room and fight again!" + ANSI_RESET);
     }
     public void noMonster()
     {
