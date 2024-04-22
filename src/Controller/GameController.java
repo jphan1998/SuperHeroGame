@@ -169,8 +169,7 @@ public class GameController implements java.io.Serializable {
             }
             else if (verb.equalsIgnoreCase("Fight")){
                 String monsterName = input.substring(5).trim();
-                if (gameModel.getPlayer().getCurRoom().getMonster().getName().equalsIgnoreCase(monsterName))
-                {
+                if (gameModel.getPlayer().getCurRoom().getMonster().getName().equalsIgnoreCase(monsterName)) {
                     Monster monster = gameModel.getPlayer().getCurRoom().getMonster();
                     gameView.encounterMonster();
                     boolean playerWon = gameModel.getPlayer().combatWithMonster(monster);
@@ -189,18 +188,14 @@ public class GameController implements java.io.Serializable {
                         else
                             loadQuit();
                     }
-                }
-
-                else
-                {
+                } else {
                     gameView.noMonster();
                 }
             }
             else if(verb.equalsIgnoreCase("Equip")){
                 if(gameModel.getPlayer().getInventory().containsKey(object)){
                     gameView.equip(gameModel.getPlayer().equip(object));
-                }
-                else{
+                } else{
                     gameView.notInv();
                 }
             }else if(verb.equalsIgnoreCase("Consume")){
