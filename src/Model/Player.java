@@ -283,18 +283,13 @@ public class Player {
         return inventory.get(name).getItemDescription();
     }
 
-    public boolean combatWithMonster(Monster monster)
-    {
+    public boolean combatWithMonster(Monster monster) {
         System.out.println("You encountered a " + ANSI_PURPLE +  monster.getName() + ANSI_RESET + "!");
         System.out.println("Attack Damage: " + ANSI_PURPLE +  monster.getCR() + ANSI_RESET);
-
         boolean playerTurn = true;
         boolean playerWon = false;
-
-        while (getHP() > 0 && curRoom.getMonster().getHP() > 0)
-        {
-            if (playerTurn)
-            {
+        while (getHP() > 0 && curRoom.getMonster().getHP() > 0) {
+            if (playerTurn) {
                 System.out.println("Your health: " + ANSI_PURPLE +  getHP() + ANSI_RESET);
                 System.out.println(curRoom.getMonster().getName() + "'s health: " + ANSI_PURPLE +  curRoom.getMonster().getHP() + ANSI_RESET);
                 System.out.println("Choose your action:");
@@ -303,44 +298,33 @@ public class Player {
                 System.out.print("Your command: ");
                 Scanner scanner = new Scanner(System.in);
                 String action = scanner.nextLine().toUpperCase();
-
-                switch (action)
-                {
+                switch (action) {
                     case "ATTACK":
                         int randomNumber = (int) (Math.random() * 10) + 1;
                         int playerCR = getCR();
                         int playerDealDamage = Math.max(0, (playerCR + randomNumber) - curRoom.getMonster().getCR());
                         curRoom.getMonster().setHP(curRoom.getMonster().getHP() - playerDealDamage);
-
                         System.out.println("You hit the " + ANSI_PURPLE + monster.getName() + ANSI_RESET + " for " + ANSI_PURPLE + playerDealDamage + ANSI_RESET + " damage.");
                         break;
-
                     case "FLEE":
                         if(getHP() <= 10){
                             setCurRoom(getPrevRoom());
                             System.out.println(ANSI_RED +"You have fled to the previous room" + ANSI_RESET);
                             return false;
-
                         }
                         playerTurn = true;
                         break;
-
                     default:
                         System.out.println(ANSI_RED +"You did nothing!! Try again." + ANSI_RESET);
                 }
-            }
-            else
-            {
+            } else {
                 int randomNumber = (int) (Math.random() * 10) + 1;
                 int monsterCR = curRoom.getMonster().getCR();
                 int monsterDealDamage = Math.max(0, (monsterCR + randomNumber) - getCR());
-
                 setHP(getHP() - monsterDealDamage);
                 System.out.println("The " + ANSI_PURPLE + curRoom.getMonster().getName() + ANSI_RESET + " hits you for " + ANSI_PURPLE + monsterDealDamage + ANSI_RESET + " damage.");
             }
-
-            if (monster.getHP() <= 0)
-            {
+            if (monster.getHP() <= 0) {
                 System.out.println(ANSI_RED + "You defeated the " + ANSI_RESET + ANSI_PURPLE + curRoom.getMonster().getName() + ANSI_RESET + ANSI_RED +  "!" + ANSI_RESET);
                 playerWon = true;
                 setHP(getHP()+3);
@@ -351,8 +335,7 @@ public class Player {
             }
             playerTurn = !playerTurn;
         }
-        if (!playerWon)
-        {
+        if (!playerWon) {
             System.out.println(ANSI_RED + "You were defeated by the " + ANSI_RESET + ANSI_PURPLE + curRoom.getMonster().getName() + ANSI_RESET + ANSI_RED +  "!" + ANSI_RESET);
         }
         return playerWon;
