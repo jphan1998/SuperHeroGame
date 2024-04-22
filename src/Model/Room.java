@@ -4,10 +4,11 @@
  */
 package Model;
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Room
+public class Room implements Serializable
     {
         private String roomName;
         private String roomDescription;

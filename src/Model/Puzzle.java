@@ -3,10 +3,11 @@
  */
 package Model;
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Puzzle {
+public class Puzzle implements Serializable {
     String name;
     String desc;
     String hint;

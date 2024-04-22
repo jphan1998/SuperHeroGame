@@ -4,10 +4,11 @@
  */
 package Model;
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Monster {
+public class Monster implements Serializable {
     private String name;
     private String desc;
     private int CR;

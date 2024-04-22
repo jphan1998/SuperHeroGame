@@ -5,11 +5,12 @@
  */
 package Model;
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class Player {
+public class Player implements Serializable {
     private String name;
     private MapReader gameMap;
     private Room curRoom;

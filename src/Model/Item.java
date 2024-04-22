@@ -5,7 +5,9 @@
 
 package Model;
 
-public class Item {
+import java.io.Serializable;
+
+public class Item implements Serializable {
     private String ItemType;
     private String ItemName;
     private String ItemDescription;
