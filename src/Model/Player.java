@@ -343,6 +343,10 @@ public class Player {
             {
                 System.out.println(ANSI_RED + "You defeated the " + ANSI_RESET + ANSI_PURPLE + curRoom.getMonster().getName() + ANSI_RESET + ANSI_RED +  "!" + ANSI_RESET);
                 playerWon = true;
+                setHP(getHP()+3);
+                setCR(getCR()+1);
+                System.out.println(ANSI_RED + "Current HP " + ANSI_RESET + ANSI_PURPLE + getHP() + ANSI_RESET + ANSI_RED +  " 3+" + ANSI_RESET);
+                System.out.println(ANSI_RED + "Current CR " + ANSI_RESET + ANSI_PURPLE + getCR() + ANSI_RESET + ANSI_RED +  " 1+" + ANSI_RESET);
                 break;
             }
             playerTurn = !playerTurn;
