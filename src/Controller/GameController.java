@@ -268,7 +268,6 @@ public class GameController implements java.io.Serializable {
             out.writeObject(gameModel);
             out.close();
             fileOut.close();
-            System.out.println("Game saved successfully.");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -281,7 +280,6 @@ public class GameController implements java.io.Serializable {
             gameModel = (GameModel) in.readObject();
             in.close();
             fileIn.close();
-            System.out.println("Game loaded successfully.");
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
