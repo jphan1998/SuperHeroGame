@@ -180,7 +180,6 @@ public class GameController implements java.io.Serializable {
                     }
                     else {
                         gameView.lose();
-                        loadGame(); // Game over method
                     }
                 }
 
