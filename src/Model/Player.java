@@ -286,14 +286,14 @@ public class Player implements Serializable {
 
     public boolean combatWithMonster(Monster monster) {
         System.out.println("You encountered a " + ANSI_PURPLE +  monster.getName() + ANSI_RESET + "!");
-        System.out.println("Attack Damage: " + ANSI_PURPLE +  monster.getCR() + ANSI_RESET);
+        System.out.println("Monster HP: " + ANSI_PURPLE +  monster.getCR() + ANSI_RESET);
 
         boolean playerTurn = true;
         boolean playerWon = false;
         while (getHP() > 0 && curRoom.getMonster().getHP() > 0) {
             if (playerTurn) {
-                System.out.println("Your health: " + ANSI_PURPLE +  getHP() + ANSI_RESET);
-                System.out.println(curRoom.getMonster().getName() + "'s health: " + ANSI_PURPLE +  curRoom.getMonster().getHP() + ANSI_RESET);
+                System.out.println("Player HP: " + ANSI_PURPLE +  getHP() + ANSI_RESET);
+                System.out.println(curRoom.getMonster().getName() + "'s HP: " + ANSI_PURPLE +  curRoom.getMonster().getHP() + ANSI_RESET);
                 System.out.println("Choose your action:");
                 System.out.println("Attack");
                 System.out.println("Flee");
