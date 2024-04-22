@@ -158,12 +158,12 @@ public class GameView {
     }
     public void win()
     {
-        System.out.println(ANSI_RED + "You defeated the monster!" + ANSI_RESET);
+        System.out.println(ANSI_RED + "You won and the monster has gone!" + ANSI_RESET);
     }
 
     public void lose()
     {
-        System.out.println(ANSI_RED + "You were defeated by the monster!" + ANSI_RESET);
+        System.out.println(ANSI_RED + "You can come back to the room and fight again!" + ANSI_RESET);
     }
     public void noMonster()
     {
