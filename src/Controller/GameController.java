@@ -175,6 +175,10 @@ public class GameController implements java.io.Serializable {
                     gameView.encounterMonster();
                     boolean playerWon = gameModel.getPlayer().combatWithMonster(monster);
                     if (playerWon) {
+                        if(gameModel.getPlayer().getCurRoom().getMonster().getInventory().containsKey(object)){
+                            gameModel.getPlayer().getCurRoom().getInventory().put(gameModel.getPlayer().getCurRoom().getMonster().getInventory().get(object).getItemName(),gameModel.getPlayer().getCurRoom().getMonster().getInventory().get(object));
+
+                        }
                         gameModel.getPlayer().getCurRoom().removeMonster();
                         gameView.win();
                     }
