@@ -309,7 +309,6 @@ public class Player {
                     case "FLEE":
                         if(getHP() <= 10){
                             setCurRoom(getPrevRoom());
-                            System.out.println(ANSI_RED +"You have fled to the previous room" + ANSI_RESET);
                             return false;
                         }
                         playerTurn = true;
