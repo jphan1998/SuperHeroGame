@@ -167,7 +167,7 @@ public class GameView {
     }
     public void noMonster()
     {
-        System.out.println(ANSI_RED + "No monster in this room!" + ANSI_RESET);
+        System.out.println(ANSI_RED + "No such monster in this room!" + ANSI_RESET);
     }
     public void selectionDefeat(){
         System.out.println("Load: Load Game to a previously saved point.\nExit: Quit Game.");
