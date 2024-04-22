@@ -345,16 +345,12 @@ public class Player {
                 playerWon = true;
                 break;
             }
-
             playerTurn = !playerTurn;
         }
-
         if (!playerWon)
         {
             System.out.println(ANSI_RED + "You were defeated by the " + ANSI_RESET + ANSI_PURPLE + curRoom.getMonster().getName() + ANSI_RESET + ANSI_RED +  "!" + ANSI_RESET);
-
         }
-
         return playerWon;
     }
 
