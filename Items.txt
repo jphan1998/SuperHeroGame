@@ -78,14 +78,14 @@ A sturdy metal hook attached to a length of strong rope, designed for traversing
 Room~
 Item~
 
-F2R5~
+F2R6~
 Mirror Shield~
 A gleaming shield adorned with a reflective surface, capable of deflecting both physical and magical attacks. Its mirrored surface can also be used to dazzle foes with blinding flashes of light, providing a strategic advantage in battle.~
 Monster~
 Equipment~
 3~
 
-F3R7~
+F3R3~
 Invisibility Cloak~
 A silken cloak infused with magic that grants its wearer the ability to become invisible at will. While wrapped in its folds, one can move unseen and undetected, making it an invaluable asset for stealthy maneuvers or escaping dangerous situations unnoticed.~
 Monster~
@@ -97,7 +97,7 @@ A rolled parchment inscribed with intricate symbols and arcane writings, contain
 Room~
 Item~
 
-F1R1~
+F2R3~
 Enchanted Dagger~
 A finely crafted dagger imbued with mystical enchantments, capable of delivering devastating blows to foes.~
 Room~

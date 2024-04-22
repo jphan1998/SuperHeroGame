@@ -7,6 +7,7 @@
 package Controller;
 
 import Model.GameModel;
+import Model.Item;
 import Model.Monster;
 import View.GameView;
 import java.io.*;
@@ -168,7 +169,6 @@ public class GameController implements java.io.Serializable {
             }
             else if (verb.equalsIgnoreCase("Fight")){
                 String monsterName = input.substring(5).trim();
-
                 if (gameModel.getPlayer().getCurRoom().getMonster().getName().equalsIgnoreCase(monsterName))
                 {
                     Monster monster = gameModel.getPlayer().getCurRoom().getMonster();
