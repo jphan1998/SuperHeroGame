@@ -11,14 +11,17 @@ import java.util.Scanner;
 public class MapReader implements java.io.Serializable {
 
     private HashMap<String, Room> gameMap;
+    private HashMap<Integer, Commands> commands;
 
     // MapReader Object was created by Jimmy and all Methods inside.
     public MapReader() throws FileNotFoundException {
         gameMap = new HashMap<>();
+        commands = new HashMap<>();
         readMap("Room.txt");
         readMonster("Monster.txt");
         readPuzzle("puzzles.txt");
         readItems("Items.txt");
+        readCommands("Commands.txt");
     }
 
     public void readMap(String file) throws FileNotFoundException {
@@ -41,6 +44,19 @@ public class MapReader implements java.io.Serializable {
             aMaps.put(id, new Room(id, name, desc, visited, locked, n, e, s, w));
         }
         this.gameMap = aMaps;
+    }
+
+    public void readCommands(String file) throws FileNotFoundException{
+        File reader = new File(file); //Creates a file class that can be run through the scanner.
+        Scanner commReader = new Scanner(reader);
+        commReader.useDelimiter("[~\r\n]+"); //Delimiter to separate the text file, removes carriage return, new line, and '~'.
+
+        while (commReader.hasNext()) {
+            int id = Integer.parseInt(commReader.next().trim());
+            String name = commReader.next();
+            String desc = commReader.next();
+            commands.put(id, new Commands(id,name,desc));
+        }
     }
 
     public void readMonster(String file) throws FileNotFoundException{
@@ -138,6 +154,14 @@ public class MapReader implements java.io.Serializable {
 
     public void setGameMap(HashMap<String, Room> gameMap) {
         this.gameMap = gameMap;
+    }
+
+    public HashMap<Integer, Commands> getCommands() {
+        return commands;
+    }
+
+    public void setCommands(HashMap<Integer, Commands> commands) {
+        this.commands = commands;
     }
 }
 

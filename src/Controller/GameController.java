@@ -89,6 +89,11 @@ public class GameController implements java.io.Serializable {
                 // Display the current room after loading the game
                 gameView.updateView("You are now in " + gameModel.getPlayer().getCurRoom().getName() + "\n" + gameModel.getPlayer().getCurRoom().getDescription());
             }
+            else if(verb.equalsIgnoreCase("Help")){
+                for(Integer id : gameModel.getGameMap().getCommands().keySet()){
+                    gameView.commands(gameModel.getGameMap().getCommands().get(id).getName(), gameModel.getGameMap().getCommands().get(id).getDesc());
+                }
+            }
             else{
                 gameView.wrongCommand();
             }

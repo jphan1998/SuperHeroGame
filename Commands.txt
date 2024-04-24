@@ -1,0 +1,71 @@
+1~
+Move <North,South,East,West>~
+Allows the player to move in the direction chosen.~
+
+2~
+Access Status~
+Displays current HP and CR (Combat Rating) stats~
+
+3~
+Save~
+Saves the Game file with current progress~
+
+4~
+Load~
+Loads from the previous save file.~
+
+5~
+Exit~
+Exit out of the game~
+
+6~
+Inventory or I~
+Shows items in inventory~
+
+7~
+Search~
+Displays the items, puzzle, and monsters in the current room~
+
+8~
+Pickup <itemName>~
+Pick up <itemName> and adds to inventory~
+
+9~
+Examine <itemName>~
+Gives a brief description of <itemName>~
+
+10~
+Drop <itemName>~
+Drops <itemName> from inventory and into current room~
+
+11~
+Equip <itemName>~
+Equip an equipment, can only have on equipped~
+
+12~
+Use <itemName>~
+Uses an item that is currently in your inventory~
+
+13~
+Consume <itemName>~
+Consumes consumable from inventory to heal~
+
+14~
+Solve Puzzle~
+Interacts with the puzzle inside the room and prompts you to solve it~
+
+15~
+Quit~
+Will allow you to quit from the puzzle~
+
+16~
+Fight <monsterName>~
+Initiates fight with monster, giving the player the options available during the fight~
+
+17~
+Flee~
+Escapes from the battle~
+
+18~
+Help~
+Will list all available commands~
