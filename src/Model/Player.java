@@ -347,6 +347,9 @@ public class Player implements Serializable {
                         curRoom.getMonster().getInventory().remove(name);
                     }
                 }
+                if(!curRoom.getMonster().getUnlock().equalsIgnoreCase("0")){
+                    gameMap.getRoom(curRoom.getMonster().getUnlock()).setLocked(false);
+                }
                 break;
             }
             playerTurn = !playerTurn;

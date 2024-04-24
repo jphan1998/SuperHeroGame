@@ -9,7 +9,7 @@ F2R4~
 Golem~
 Massive, made of stone or clay, slow-moving but highly durable.~
 4~
-16~
+15~
 F2R6~
 
 F2R5~

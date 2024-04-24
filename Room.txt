@@ -92,7 +92,7 @@ F2R3~
 Ruined Gate~
 The Ruined Gate stands as a testament to the dungeon's former glory, now weathered and broken. The stone archway, adorned with intricate carvings, lies in ruins, its massive doors long since collapsed. Vines and moss creep across the crumbling walls, and ancient runes etched into the stone hint at forgotten enchantments. Beyond the shattered gate, darkness beckons, concealing untold secrets within the depths of the dungeon.~
 false~
-true~
+false~
 0~
 0~
 0~
