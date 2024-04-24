@@ -83,6 +83,9 @@ public class Player implements Serializable {
                     else if(input.equalsIgnoreCase("Runestone")){
                         return "use";
                     }
+                    else if(verb.equalsIgnoreCase("Quit")){
+                        break;
+                    }
                 else if(!input.toLowerCase().contains(curRoom.getPuzzle().solution.toLowerCase())) {
                     System.out.println("The answer you have provided is wrong, you still have " + (i - 1) + " left. Try one more time.");
                 } else {

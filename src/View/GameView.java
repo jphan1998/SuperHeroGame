@@ -42,6 +42,10 @@ public class GameView implements Serializable {
         System.out.println(ANSI_RED + "Please only enter the commands given." + ANSI_RESET);
     }
 
+    public void commands(String name, String desc){
+        System.out.println(ANSI_GREEN + name + " : " + desc + ANSI_RESET);
+    }
+
     public void hasVisited(){
         System.out.println(ANSI_BLUE + "This place seems familiar, you have been here before!" + ANSI_RESET);
     }
