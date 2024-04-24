@@ -1,6 +1,6 @@
 package Model;
 
-public class Commands {
+public class Commands implements java.io.Serializable {
     private int id;
     private String name;
 
