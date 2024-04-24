@@ -160,7 +160,7 @@ public class GameView implements Serializable {
     }
     public void encounterMonster()
     {
-        System.out.println(ANSI_PURPLE +"You encountered a " + ANSI_RESET + "!");
+        System.out.println(ANSI_PURPLE +"You encountered a Monster!" + ANSI_RESET);
     }
     public void win()
     {

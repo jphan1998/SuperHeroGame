@@ -289,7 +289,7 @@ public class Player implements Serializable {
 
     public boolean combatWithMonster(Monster monster) {
         System.out.println("You encountered a " + ANSI_PURPLE +  monster.getName() + ANSI_RESET + "!");
-        System.out.println("Monster HP: " + ANSI_PURPLE +  monster.getCR() + ANSI_RESET);
+        System.out.println("Monster CR: " + ANSI_PURPLE +  monster.getCR() + ANSI_RESET);
 
         boolean playerTurn = true;
         boolean playerWon = false;
