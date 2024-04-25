@@ -80,7 +80,7 @@ public class Player implements Serializable {
                     else if(input.equalsIgnoreCase("Skeleton Key")){
                         return "use";
                     }
-                    else if(input.equalsIgnoreCase("Runestone")){
+                    else if(input.equalsIgnoreCase("Rune Stone")){
                         return "use";
                     }
                     else if(verb.equalsIgnoreCase("Quit")){
